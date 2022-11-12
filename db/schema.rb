@@ -10,11 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_11_12_132636) do
+ActiveRecord::Schema[7.0].define(version: 2022_11_12_133746) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "accessibiity_features", force: :cascade do |t|
+  create_table "accessibility_features", force: :cascade do |t|
     t.string "feature"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
