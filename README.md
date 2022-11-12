@@ -1,1 +1,5 @@
-Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
+<h1>Adept</h1>
+<h3>A community driven solution for an inclusive future</h3>
+
+
+Created by Freddy Henderson, Pablo Muñoz and Augustin Romaneschi
