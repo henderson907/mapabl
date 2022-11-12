@@ -1,0 +1,2 @@
+class VenueCategory < ApplicationRecord
+end
