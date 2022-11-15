@@ -46,9 +46,11 @@ VenueCategory.create(category: "Misc - Non-Food")
 puts "Finished seeding VenueCategory (2/6)..."
 
 # USERS
-puts "Starting User..."
 
 # VENUES
+puts "Starting Venue..."
+
+Venue.create()
 
 # VENUE FEATURES
 
