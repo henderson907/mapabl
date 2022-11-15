@@ -1,12 +1,11 @@
-.navbar-lewagon {
-  justify-content: space-between;
-  background: white;
+.navbar-adept {
+  background-color: $blue !important;
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+.navbar-adept h1 {
+  font-family: 'Pacifico', cursive;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.navbar-adept h2 a {
+  color: #fff !important;
 }
