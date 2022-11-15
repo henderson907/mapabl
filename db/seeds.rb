@@ -215,11 +215,17 @@ new_venue_feat.save
 puts "finished seeding VenueFeature (5/6)..."
 
 # REVIEWS
-review = Review.new(content: "The lights were flickering so much! They need to change the lightbulbs.",
-                    rating: 2)
-review.venue = Venue.find_by(name: "Lidl")
-review.user = User.find_by(email: "testUser1@test.com")
-review.save
+new_review = Review.new(content: "The lights were flickering so much! They need to change the lightbulbs.",
+                        rating: 2)
+new_review.venue = Venue.find_by(name: "Lidl")
+new_review.user = User.all[1]
+new_review.save
+
+new_review = Review.new(content: "",
+                        rating: 2)
+new_review.venue = Venue.find_by(name: "")
+new_review.user = User.all[1]
+new_review.save
 
 Review.create(content: "The staff were really kind and came round the counter so I could see them in my wheelchair!",
               rating: 4,
