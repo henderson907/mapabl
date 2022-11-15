@@ -11,8 +11,6 @@ Venue.destroy_all
 puts "Seeding your database..."
 
 # ACCESSIBILITY FEATURES
-puts "Starting AccessibilityFeature..."
-
 AccessibilityFeature.create(feature: "Step-free Access")
 AccessibilityFeature.create(feature: "Accessible Bathroom")
 AccessibilityFeature.create(feature: "Braille Information")
@@ -21,17 +19,13 @@ AccessibilityFeature.create(feature: "Quiet Atmosphere")
 AccessibilityFeature.create(feature: "No Flashing Lights")
 AccessibilityFeature.create(feature: "Automatic Doors")
 AccessibilityFeature.create(feature: "Chairs with Back Support")
-AccessibilityFeature.create(feature: "Online Ordering Available")
 AccessibilityFeature.create(feature: "Biohazard Waste Bin in Bathroom")
-AccessibilityFeature.create(feature: "Crutch Storage Space")
 AccessibilityFeature.create(feature: "Large Print Information")
 AccessibilityFeature.create(feature: "Sign Language Interpretation")
 
 puts "Finished seeding AccessibilityFeature (1/6)..."
 
 # VENUE CATEGORIES
-puts "Starting VenueCategory..."
-
 VenueCategory.create(category: "Restaurant")
 VenueCategory.create(category: "Bakery")
 VenueCategory.create(category: "Supermarket")
@@ -43,8 +37,6 @@ VenueCategory.create(category: "Other")
 puts "Finished seeding VenueCategory (2/6)..."
 
 # USERS
-puts "Starting User..."
-
 User.create(first_name: "Carson", last_name: "O'Gin",
             email: "testUser1@test.com", password: "123456")
 
@@ -57,8 +49,6 @@ User.create(first_name: "Lee", last_name: "Murr",
 puts "Finished seeding User (3/6)..."
 
 # VENUES
-puts "Starting Venue..."
-
 new_venue = Venue.new(name: "Lidl", address: "Leipziger Str. 42, 10117 Berlin, Germany")
 new_venue.venue_category = VenueCategory.find_by(category: "Supermarket")
 new_venue.save
@@ -102,6 +92,79 @@ new_venue.save
 puts "finished seeding Venue (4/6)..."
 
 # VENUE FEATURES
+VenueFeature.new(venue_id: Venue.find_by(name: "Lidl"),
+                 accessibility_feature_id: AccessibilityFeature.find_by(feature: "Step-free Access"))
+
+VenueFeature.new(venue_id: Venue.find_by(name: "Lidl"),
+                 accessibility_feature_id: AccessibilityFeature.find_by(feature: "Automatic Doors"))
+
+VenueFeature.new(venue_id: Venue.find_by(name: "Asia Gondel"),
+                 accessibility_feature_id: AccessibilityFeature.find_by(feature: "Chairs with Back Support"))
+
+VenueFeature.new(venue_id: Venue.find_by(name: "Schäfer's"),
+                 accessibility_feature_id: AccessibilityFeature.find_by(feature: "Quiet Atmosphere"))
+
+VenueFeature.new(venue_id: Venue.find_by(name: "Schäfer's"),
+                 accessibility_feature_id: AccessibilityFeature.find_by(feature: "No Flashing Lights"))
+
+VenueFeature.new(venue_id: Venue.find_by(name: "CineStar CUBIX"),
+                 accessibility_feature_id: AccessibilityFeature.find_by(feature: "Step-free Access"))
+
+VenueFeature.new(venue_id: Venue.find_by(name: "CineStar CUBIX"),
+                 accessibility_feature_id: AccessibilityFeature.find_by(feature: "Automatic Doors"))
+
+VenueFeature.new(venue_id: Venue.find_by(name: "CineStar CUBIX"),
+                 accessibility_feature_id: AccessibilityFeature.find_by(feature: "Accessible Bathroom"))
+
+VenueFeature.new(venue_id: Venue.find_by(name: "Dussman das KulturKaufhaus"),
+                 accessibility_feature_id: AccessibilityFeature.find_by(feature: "Step-free Access"))
+
+VenueFeature.new(venue_id: Venue.find_by(name: "Dussman das KulturKaufhaus"),
+                 accessibility_feature_id: AccessibilityFeature.find_by(feature: "Automatic Doors"))
+
+VenueFeature.new(venue_id: Venue.find_by(name: "Dussman das KulturKaufhaus"),
+                 accessibility_feature_id: AccessibilityFeature.find_by(feature: "No Flashing Lights"))
+
+VenueFeature.new(venue_id: Venue.find_by(name: "Dussman das KulturKaufhaus"),
+                 accessibility_feature_id: AccessibilityFeature.find_by(feature: "Quiet Atmosphere"))
+
+VenueFeature.new(venue_id: Venue.find_by(name: "Pergamonmuseum"),
+                 accessibility_feature_id: AccessibilityFeature.find_by(feature: "Step-free Access"))
+
+VenueFeature.new(venue_id: Venue.find_by(name: "Pergamonmuseum"),
+                 accessibility_feature_id: AccessibilityFeature.find_by(feature: "Accessible Bathroom"))
+
+VenueFeature.new(venue_id: Venue.find_by(name: "Pergamonmuseum"),
+                 accessibility_feature_id: AccessibilityFeature.find_by(feature: "Braille Information"))
+
+VenueFeature.new(venue_id: Venue.find_by(name: "Pergamonmuseum"),
+                 accessibility_feature_id: AccessibilityFeature.find_by(feature: "Hearing Induction Loops"))
+
+VenueFeature.new(venue_id: Venue.find_by(name: "Pergamonmuseum"),
+                 accessibility_feature_id: AccessibilityFeature.find_by(feature: "Large Print Information"))
+
+VenueFeature.new(venue_id: Venue.find_by(name: "Pergamonmuseum"),
+                 accessibility_feature_id: AccessibilityFeature.find_by(feature: "Quiet Atmosphere"))
+
+VenueFeature.new(venue_id: Venue.find_by(name: "Mr Imbiss BURGER"),
+                 accessibility_feature_id: AccessibilityFeature.find_by(feature: "No Flashing Lights"))
+
+VenueFeature.new(venue_id: Venue.find_by(name: "Bäcker Wiedemann"),
+                 accessibility_feature_id: AccessibilityFeature.find_by(feature: "Chairs with Back Support"))
+
+VenueFeature.new(venue_id: Venue.find_by(name: "Charlotte 1"),
+                 accessibility_feature_id: AccessibilityFeature.find_by(feature: "Large Print Information"))
+
+VenueFeature.new(venue_id: Venue.find_by(name: "Burgermeister Alexanderplatz"),
+                 accessibility_feature_id: AccessibilityFeature.find_by(feature: "Chairs with Back Support"))
+
+VenueFeature.new(venue_id: Venue.find_by(name: "Burgermeister Alexanderplatz"),
+                 accessibility_feature_id: AccessibilityFeature.find_by(feature: "Quiet Atmosphere"))
+
+VenueFeature.new(venue_id: Venue.find_by(name: "Burgermeister Alexanderplatz"),
+                 accessibility_feature_id: AccessibilityFeature.find_by(feature: "Step-free Access"))
+
+puts "finished seeding VenueFeature (5/6)..."
 
 # REVIEWS
 
