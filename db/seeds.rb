@@ -33,15 +33,12 @@ puts "Finished seeding AccessibilityFeature (1/6)..."
 puts "Starting VenueCategory..."
 
 VenueCategory.create(category: "Restaurant")
-VenueCategory.create(category: "Cafe")
 VenueCategory.create(category: "Bakery")
 VenueCategory.create(category: "Supermarket")
 VenueCategory.create(category: "Museum")
 VenueCategory.create(category: "Cinema")
-VenueCategory.create(category: "Theatre")
 VenueCategory.create(category: "Shop")
-VenueCategory.create(category: "Misc - Food")
-VenueCategory.create(category: "Misc - Non-Food")
+VenueCategory.create(category: "Other")
 
 puts "Finished seeding VenueCategory (2/6)..."
 
@@ -50,7 +47,47 @@ puts "Finished seeding VenueCategory (2/6)..."
 # VENUES
 puts "Starting Venue..."
 
-Venue.create()
+new_venue = Venue.new(name: "Lidl", address: "Leipziger Str. 42, 10117 Berlin, Germany")
+new_venue.venue_category = VenueCategory.find_by(category: "Supermarket")
+new_venue.save
+
+new_venue = Venue.new(name: "Asia Gondel", address: "Brückenstraße. 1B, 10179 Berlin Germany")
+new_venue.venue_category = VenueCategory.find_by(category: "Restaurant")
+new_venue.save
+
+new_venue = Venue.new(name: "Schäfer's", address: "Wallstraße 14, 10179 Berlin, Germany")
+new_venue.venue_category = VenueCategory.find_by(category: "Bakery")
+new_venue.save
+
+new_venue = Venue.new(name: "Pergamonmuseum", address: "Bodestraße 1-3, 10178 Berlin, Germany")
+new_venue.venue_category = VenueCategory.find_by(category: "Museum")
+new_venue.save
+
+new_venue = Venue.new(name: "CineStar CUBIX", address: "Rathausstraße 1, 10178 Berlin, Germany")
+new_venue.venue_category = VenueCategory.find_by(category: "Cinema")
+new_venue.save
+
+new_venue = Venue.new(name: "Dussman das KulturKaufhaus", address: "Friedrichstraße 90, 10117 Berlin, Germany")
+new_venue.venue_category = VenueCategory.find_by(category: "Shop")
+new_venue.save
+
+new_venue = Venue.new(name: "Mr Imbiss BURGER", address: "Schützenstraße 2, 10117 Berlin, Germany")
+new_venue.venue_category = VenueCategory.find_by(category: "Other")
+new_venue.save
+
+new_venue = Venue.new(name: "Bäcker Wiedemann", address: "Karl-Liebknecht-STr. 5, 10178 Berlin, Germany")
+new_venue.venue_category = VenueCategory.find_by(category: "Bakery")
+new_venue.save
+
+new_venue = Venue.new(name: "Charlotte 1", address: "Charlottenstraße 1, 10969 Berlin, Germany")
+new_venue.venue_category = VenueCategory.find_by(category: "Restaurant")
+new_venue.save
+
+new_venue = Venue.new(name: "Burgermeister Alexanderplatz", address: "Dirckenstraße 113, 10178 Berlin, Germany")
+new_venue.venue_category = VenueCategory.find_by(category: "Restaurant")
+new_venue.save
+
+puts "finished seeding Venue (4/6)..."
 
 # VENUE FEATURES
 
