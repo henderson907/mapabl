@@ -43,6 +43,18 @@ VenueCategory.create(category: "Other")
 puts "Finished seeding VenueCategory (2/6)..."
 
 # USERS
+puts "Starting User..."
+
+User.create(first_name: "Carson", last_name: "O'Gin",
+            email: "testUser1@test.com", password: "123456")
+
+User.create(first_name: "Shirley", last_name: "Knot",
+            email: "testUser2@test.com", password: "123456")
+
+User.create(first_name: "Lee", last_name: "Murr",
+            email: "testUser3@test.com", password: "123456")
+
+puts "Finished seeding User (3/6)..."
 
 # VENUES
 puts "Starting Venue..."
