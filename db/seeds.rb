@@ -1,11 +1,11 @@
 # Cleaning the database of previous entries
 puts "Clearing your database..."
-AccessibilityFeature.destroy_all
 Review.destroy_all
-User.destroy_all
-VenueCategory.destroy_all
 VenueFeature.destroy_all
 Venue.destroy_all
+User.destroy_all
+VenueCategory.destroy_all
+AccessibilityFeature.destroy_all
 
 # Re-seeding the database
 puts "Seeding your database..."
@@ -92,85 +92,134 @@ new_venue.save
 puts "finished seeding Venue (4/6)..."
 
 # VENUE FEATURES
-VenueFeature.create(venue_id: Venue.find_by(name: "Lidl"),
-                    accessibility_feature_id: AccessibilityFeature.find_by(feature: "Step-free Access"))
+new_venue_feat = VenueFeature.new
+new_venue_feat.venue = Venue.find_by(name: "Lidl")
+new_venue_feat.accessibility_feature = AccessibilityFeature.find_by(feature: "Step-free Access")
+new_venue_feat.save
 
-VenueFeature.create(venue_id: Venue.find_by(name: "Lidl"),
-                    accessibility_feature_id: AccessibilityFeature.find_by(feature: "Automatic Doors"))
+new_venue_feat = VenueFeature.new
+new_venue_feat.venue = Venue.find_by(name: "Lidl")
+new_venue_feat.accessibility_feature = AccessibilityFeature.find_by(feature: "Automatic Doors")
+new_venue_feat.save
 
-VenueFeature.create(venue_id: Venue.find_by(name: "Asia Gondel"),
-                    accessibility_feature_id: AccessibilityFeature.find_by(feature: "Chairs with Back Support"))
+new_venue_feat = VenueFeature.new
+new_venue_feat.venue = Venue.find_by(name: "Asia Gondel")
+new_venue_feat.accessibility_feature = AccessibilityFeature.find_by(feature: "Chairs with Back Support")
+new_venue_feat.save
 
-VenueFeature.create(venue_id: Venue.find_by(name: "Schäfer's"),
-                    accessibility_feature_id: AccessibilityFeature.find_by(feature: "Quiet Atmosphere"))
+new_venue_feat = VenueFeature.new
+new_venue_feat.venue = Venue.find_by(name: "Schäfer's")
+new_venue_feat.accessibility_feature = AccessibilityFeature.find_by(feature: "Quiet Atmosphere")
+new_venue_feat.save
 
-VenueFeature.create(venue_id: Venue.find_by(name: "Schäfer's"),
-                    accessibility_feature_id: AccessibilityFeature.find_by(feature: "No Flashing Lights"))
+new_venue_feat = VenueFeature.new
+new_venue_feat.venue = Venue.find_by(name: "Schäfer's")
+new_venue_feat.accessibility_feature = AccessibilityFeature.find_by(feature: "No Flashing Lights")
+new_venue_feat.save
 
-VenueFeature.create(venue_id: Venue.find_by(name: "CineStar CUBIX"),
-                    accessibility_feature_id: AccessibilityFeature.find_by(feature: "Step-free Access"))
+new_venue_feat = VenueFeature.new
+new_venue_feat.venue = Venue.find_by(name: "CineStar CUBIX")
+new_venue_feat.accessibility_feature = AccessibilityFeature.find_by(feature: "Step-free Access")
+new_venue_feat.save
 
-VenueFeature.create(venue_id: Venue.find_by(name: "CineStar CUBIX"),
-                    accessibility_feature_id: AccessibilityFeature.find_by(feature: "Automatic Doors"))
+new_venue_feat = VenueFeature.new
+new_venue_feat.venue = Venue.find_by(name: "CineStar CUBIX")
+new_venue_feat.accessibility_feature = AccessibilityFeature.find_by(feature: "Automatic Doors")
+new_venue_feat.save
 
-VenueFeature.create(venue_id: Venue.find_by(name: "CineStar CUBIX"),
-                    accessibility_feature_id: AccessibilityFeature.find_by(feature: "Accessible Bathroom"))
+new_venue_feat = VenueFeature.new
+new_venue_feat.venue = Venue.find_by(name: "CineStar CUBIX")
+new_venue_feat.accessibility_feature = AccessibilityFeature.find_by(feature: "Accessible Bathroom")
+new_venue_feat.save
 
-VenueFeature.create(venue_id: Venue.find_by(name: "Dussman das KulturKaufhaus"),
-                    accessibility_feature_id: AccessibilityFeature.find_by(feature: "Step-free Access"))
+new_venue_feat = VenueFeature.new
+new_venue_feat.venue = Venue.find_by(name: "Dussman das KulturKaufhaus")
+new_venue_feat.accessibility_feature = AccessibilityFeature.find_by(feature: "Step-free Access")
+new_venue_feat.save
 
-VenueFeature.create(venue_id: Venue.find_by(name: "Dussman das KulturKaufhaus"),
-                    accessibility_feature_id: AccessibilityFeature.find_by(feature: "Automatic Doors"))
+new_venue_feat = VenueFeature.new
+new_venue_feat.venue = Venue.find_by(name: "Dussman das KulturKaufhaus")
+new_venue_feat.accessibility_feature = AccessibilityFeature.find_by(feature: "Automatic Doors")
+new_venue_feat.save
 
-VenueFeature.create(venue_id: Venue.find_by(name: "Dussman das KulturKaufhaus"),
-                    accessibility_feature_id: AccessibilityFeature.find_by(feature: "No Flashing Lights"))
+new_venue_feat = VenueFeature.new
+new_venue_feat.venue = Venue.find_by(name: "Dussman das KulturKaufhaus")
+new_venue_feat.accessibility_feature = AccessibilityFeature.find_by(feature: "No Flashing Lights")
+new_venue_feat.save
 
-VenueFeature.create(venue_id: Venue.find_by(name: "Dussman das KulturKaufhaus"),
-                    accessibility_feature_id: AccessibilityFeature.find_by(feature: "Quiet Atmosphere"))
+new_venue_feat = VenueFeature.new
+new_venue_feat.venue = Venue.find_by(name: "Dussman das KulturKaufhaus")
+new_venue_feat.accessibility_feature = AccessibilityFeature.find_by(feature: "Quiet Atmosphere")
+new_venue_feat.save
 
-VenueFeature.create(venue_id: Venue.find_by(name: "Pergamonmuseum"),
-                    accessibility_feature_id: AccessibilityFeature.find_by(feature: "Step-free Access"))
+new_venue_feat = VenueFeature.new
+new_venue_feat.venue = Venue.find_by(name: "Mr Imbiss BURGER")
+new_venue_feat.accessibility_feature = AccessibilityFeature.find_by(feature: "No Flashing Lights")
+new_venue_feat.save
 
-VenueFeature.create(venue_id: Venue.find_by(name: "Pergamonmuseum"),
-                    accessibility_feature_id: AccessibilityFeature.find_by(feature: "Accessible Bathroom"))
+new_venue_feat = VenueFeature.new
+new_venue_feat.venue = Venue.find_by(name: "Burgermeister Alexanderplatz")
+new_venue_feat.accessibility_feature = AccessibilityFeature.find_by(feature: "Chairs with Back Support")
+new_venue_feat.save
 
-VenueFeature.create(venue_id: Venue.find_by(name: "Pergamonmuseum"),
-                    accessibility_feature_id: AccessibilityFeature.find_by(feature: "Braille Information"))
+new_venue_feat = VenueFeature.new
+new_venue_feat.venue = Venue.find_by(name: "Burgermeister Alexanderplatz")
+new_venue_feat.accessibility_feature = AccessibilityFeature.find_by(feature: "Quiet Atmosphere")
+new_venue_feat.save
 
-VenueFeature.create(venue_id: Venue.find_by(name: "Pergamonmuseum"),
-                    accessibility_feature_id: AccessibilityFeature.find_by(feature: "Hearing Induction Loops"))
+new_venue_feat = VenueFeature.new
+new_venue_feat.venue = Venue.find_by(name: "Burgermeister Alexanderplatz")
+new_venue_feat.accessibility_feature = AccessibilityFeature.find_by(feature: "Step-free Access")
+new_venue_feat.save
 
-VenueFeature.create(venue_id: Venue.find_by(name: "Pergamonmuseum"),
-                    accessibility_feature_id: AccessibilityFeature.find_by(feature: "Large Print Information"))
+new_venue_feat = VenueFeature.new
+new_venue_feat.venue = Venue.find_by(name: "Bäcker Wiedemann")
+new_venue_feat.accessibility_feature = AccessibilityFeature.find_by(feature: "Chairs with Back Support")
+new_venue_feat.save
 
-VenueFeature.create(venue_id: Venue.find_by(name: "Pergamonmuseum"),
-                    accessibility_feature_id: AccessibilityFeature.find_by(feature: "Quiet Atmosphere"))
+new_venue_feat = VenueFeature.new
+new_venue_feat.venue = Venue.find_by(name: "Charlotte 1")
+new_venue_feat.accessibility_feature = AccessibilityFeature.find_by(feature: "Large Print Information")
+new_venue_feat.save
 
-VenueFeature.create(venue_id: Venue.find_by(name: "Mr Imbiss BURGER"),
-                    accessibility_feature_id: AccessibilityFeature.find_by(feature: "No Flashing Lights"))
+new_venue_feat = VenueFeature.new
+new_venue_feat.venue = Venue.find_by(name: "Pergamonmuseum")
+new_venue_feat.accessibility_feature = AccessibilityFeature.find_by(feature: "Step-free Access")
+new_venue_feat.save
 
-VenueFeature.create(venue_id: Venue.find_by(name: "Bäcker Wiedemann"),
-                    accessibility_feature_id: AccessibilityFeature.find_by(feature: "Chairs with Back Support"))
+new_venue_feat = VenueFeature.new
+new_venue_feat.venue = Venue.find_by(name: "Pergamonmuseum")
+new_venue_feat.accessibility_feature = AccessibilityFeature.find_by(feature: "Accessible Bathroom")
+new_venue_feat.save
 
-VenueFeature.create(venue_id: Venue.find_by(name: "Charlotte 1"),
-                    accessibility_feature_id: AccessibilityFeature.find_by(feature: "Large Print Information"))
+new_venue_feat = VenueFeature.new
+new_venue_feat.venue = Venue.find_by(name: "Pergamonmuseum")
+new_venue_feat.accessibility_feature = AccessibilityFeature.find_by(feature: "Braille Information")
+new_venue_feat.save
 
-VenueFeature.create(venue_id: Venue.find_by(name: "Burgermeister Alexanderplatz"),
-                    accessibility_feature_id: AccessibilityFeature.find_by(feature: "Chairs with Back Support"))
+new_venue_feat = VenueFeature.new
+new_venue_feat.venue = Venue.find_by(name: "Pergamonmuseum")
+new_venue_feat.accessibility_feature = AccessibilityFeature.find_by(feature: "Hearing Induction Loops")
+new_venue_feat.save
 
-VenueFeature.create(venue_id: Venue.find_by(name: "Burgermeister Alexanderplatz"),
-                    accessibility_feature_id: AccessibilityFeature.find_by(feature: "Quiet Atmosphere"))
+new_venue_feat = VenueFeature.new
+new_venue_feat.venue = Venue.find_by(name: "Pergamonmuseum")
+new_venue_feat.accessibility_feature = AccessibilityFeature.find_by(feature: "Large Print Information")
+new_venue_feat.save
 
-VenueFeature.create(venue_id: Venue.find_by(name: "Burgermeister Alexanderplatz"),
-                    accessibility_feature_id: AccessibilityFeature.find_by(feature: "Step-free Access"))
+new_venue_feat = VenueFeature.new
+new_venue_feat.venue = Venue.find_by(name: "Pergamonmuseum")
+new_venue_feat.accessibility_feature = AccessibilityFeature.find_by(feature: "Quiet Atmosphere")
+new_venue_feat.save
 
 puts "finished seeding VenueFeature (5/6)..."
 
 # REVIEWS
-Review.create(content: "The lights were flickering so much! They need to change the lightbulbs.",
-              rating: 2,
-              venue_id: Venue.find_by(name: "Lidl"),
-              user_id: User.find_by(email: "testUser1@test.com"))
+review = Review.new(content: "The lights were flickering so much! They need to change the lightbulbs.",
+                    rating: 2)
+review.venue = Venue.find_by(name: "Lidl")
+review.user = User.find_by(email: "testUser1@test.com")
+review.save
 
 Review.create(content: "The staff were really kind and came round the counter so I could see them in my wheelchair!",
               rating: 4,
@@ -205,7 +254,7 @@ Review.create(content: "It was so loud that my son was struggling a lot. The sta
               user_id: User.find_by(email: "testUser1@test.com"))
 
 Review.create(content: "One of the women working there showed me all the books about crocodiles after I told her
-                        they're my special interest. SHe let me sit and read for ages.",
+                        they're my special interest. She let me sit and read for ages.",
               rating: 5,
               venue_id: Venue.find_by(name: "Dussman das KulturKaufhaus"),
               user_id: User.find_by(email: "testUser3@test.com"))
