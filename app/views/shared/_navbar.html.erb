@@ -1,4 +1,4 @@
-<nav class="navbar fixed-top navbar-expand-lg navbar-adept">
+<nav class="navbar navbar-expand-lg navbar-adept">
   <div class="container-fluid">
     <%= link_to(raw("<h1>Adept</h1>"), root_path, class: "navbar-brand") %>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -7,32 +7,45 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-            <%= link_to "Home", root_path, class: "nav-link" %>
+          <%= link_to (root_path), class: "nav-link d-flex justify-content-between align-items-center" do %>
+            Home
+            <i class="fa-solid fa-arrow-right fa-fw d-lg-none"></i>
+          <% end %>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">Map</a>
+          <%= link_to (nil), class: "nav-link d-flex justify-content-between align-items-center" do %>
+            Map
+            <i class="fa-solid fa-arrow-right fa-fw d-lg-none"></i>
+          <% end %>
         </li>
         <li class="nav-item line-separator">
-            <a class="nav-link" href="#">About Us</a>
+          <%= link_to (nil), class: "nav-link d-flex justify-content-between align-items-center" do %>
+            About Us
+            <i class="fa-solid fa-arrow-right fa-fw d-lg-none pr-3"></i>
+          <% end %>
         </li>
       </ul>
       <ul class="navbar-nav">
         <% if user_signed_in? %>
           <li class="nav-item">
-            <a class="nav-link" href="#">My profile</a>
+            <%= link_to (nil), class: "nav-link" do %>
+              <i class="fa-solid fa-user fa-fw d-lg-none d-inline-block"></i> My profile
+            <% end %>
           </li>
           <li class="nav-item">
-            <%= link_to "Logout", destroy_user_session_path, class: "nav-link" %>
+            <%= link_to (destroy_user_session_path), class: "nav-link" do %>
+              <i class="fa-solid fa-user-lock fa-fw d-lg-none d-inline-block"></i> Logout
+            <% end %>
           </li>
         <% else %>
           <li class="nav-item">
             <%= link_to (new_user_session_path), class: "nav-link" do %>
-              <i class="fa-solid fa-right-to-bracket d-lg-none d-inline-block"></i> Login
+              <i class="fa-solid fa-right-to-bracket fa-fw d-lg-none d-inline-block"></i> Login
             <% end %>
           </li>
           <li class="nav-item">
             <%= link_to (new_user_registration_path), class: "nav-link" do %>
-              <i class="fa-solid fa-user-plus d-lg-none d-inline-block"></i> Sign up
+              <i class="fa-solid fa-user-plus fa-fw d-lg-none d-inline-block"></i> Sign up
             <% end %>
           </li>
         <% end %>
