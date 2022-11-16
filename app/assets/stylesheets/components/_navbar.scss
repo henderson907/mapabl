@@ -21,7 +21,11 @@
   font-size: 28px;
 }
 
-@media(max-width: 768px) {
+.nav-item i {
+  padding-right: 32px;
+}
+
+@media(max-width: 1023px) {
 
   .line-separator {
     padding-bottom: .5rem;
