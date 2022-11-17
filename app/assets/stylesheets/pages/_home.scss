@@ -1,1 +1,61 @@
 // Specific CSS for your home-page
+body {
+  background-color: white;
+}
+
+h3 {
+  font-weight: bold;
+}
+
+// BANNER
+.banner {
+  background-attachment: fixed;
+  background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(255, 255, 255, .1)), url('elevate.jpg');
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: calc(100vh - 50px);
+}
+
+.banner h2 {
+  color: white;
+}
+
+// WHAT IS ADEPT
+.what-is-adept {
+  margin: 45px 0;
+  padding: 30px;
+  text-align: center;
+}
+
+.what-is-adept img {
+  display: block;
+  margin: 50px auto;
+}
+
+.what-is-adept a {
+  display: inline-block;
+}
+
+@media (max-width: 767px) {
+
+  .what-is-adept {
+    position: relative;
+  }
+
+  .what-is-adept::after {
+    border-bottom: 1px solid lightgray;
+    content: "";
+    height: 80vh;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    bottom: -30px;
+    width: 250px;
+  }
+
+  #find, #review {
+    display: none;
+  }
+
+}
