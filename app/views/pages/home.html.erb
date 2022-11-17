@@ -1,2 +1,33 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<!-- BANNER -->
+<div class="banner">
+  <h2>A solution for an inclusive future</h2>
+</div>
+<!-- WHAT IS -->
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 what-is-adept" id="what">
+        <h3>What is adept?</h3>
+        <p>Adept is a community driven solution that allows you to find and filter venues to your accessibility needs</p>
+        <%= image_tag('magnifier.png', height: 180, width: 180, alt: "An image of a magnifier") %>
+        <%= link_to "Learn more", nil, class: "adept-btn" %>
+    </div>
+    <div class="col-md-4 what-is-adept" id="find">
+        <h3>Find, visit and enjoy!</h3>
+        <p>Find a place that fits your accesibility requirements, visit and have a blast with friends and family</p>
+        <%= image_tag('beer.png', height: 180, width: 180, alt: "An image of a magnifier") %>
+        <%= link_to "Find place", nil, class: "adept-btn" %>
+    </div>
+    <div class="col-md-4 what-is-adept" id="review">
+        <h3>Review and share!</h3>
+        <p>Adept is a community driven solution that allows you to find and filter venues to your accessibility needs </p>
+        <%= image_tag('star.png', height: 180, width: 180, alt: "An image of a magnifier") %>
+        <%= link_to "Review place", nil, class: "adept-btn" %>
+    </div>
+  </div>
+</div>
+<!-- OTHERS SAY -->
+<div class="container">
+  <h3>What do others think?</h3>
+  <div class="row">
+  </div>
+</div>
