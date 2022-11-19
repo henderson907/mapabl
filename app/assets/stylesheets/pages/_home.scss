@@ -10,15 +10,30 @@ h3 {
 // BANNER
 .banner {
   background-attachment: fixed;
-  background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(255, 255, 255, .1)), url('elevate.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, .7), rgba(255, 255, 255, .1)), url('elevate.jpg');
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
   height: calc(100vh - 50px);
+  position: relative;
 }
 
 .banner h2 {
   color: white;
+}
+
+.intro {
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 10% auto;
+  width: 85%;
+}
+
+.intro form {
+
+  margin: 75px 0;
 }
 
 // WHAT IS ADEPT
@@ -53,9 +68,4 @@ h3 {
     bottom: -30px;
     width: 250px;
   }
-
-  #find, #review {
-    display: none;
-  }
-
 }
