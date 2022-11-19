@@ -1,1 +1,128 @@
-// Specific CSS for your home-page
+// BANNER
+.banner {
+  background-attachment: fixed;
+  background-image: linear-gradient(rgba(0, 0, 0, .5) 60%, rgba(255, 255, 255, .1) 85%), url('elevate.jpg');
+  background-position: 50% 0%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: calc(100vh - 50px);
+  position: relative;
+}
+
+.banner h2 {
+  color: $white;
+  text-shadow: 0px 0px 10px black;
+}
+
+.intro {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 35px auto;
+  width: 85%;
+}
+
+.intro form {
+  margin: 40px 0;
+}
+
+.intro form label {
+  font-weight: bolder;
+  font-size: 18px;
+  margin: 10px 0;
+  text-shadow: 0px 0px 10px black;
+}
+
+.intro form input {
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  padding: 15px 15px;
+}
+
+.intro form input::placeholder {
+  font-style: italic;
+}
+
+@media (min-width: 1024px) {
+
+  .banner {
+    background-image: linear-gradient(rgba(0, 0, 0, .5) 60%, rgba(255, 255, 255, .1) 85%), url('elevate-small.jpg');
+  }
+
+  .banner h2 {
+    font-size: 300%;
+    text-align: center;
+  }
+
+  .intro {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto auto;
+    transform: translateY(50%);
+    width: 50%;
+  }
+}
+
+// WHAT IS ADEPT
+.what-is-adept {
+  margin: 45px 0;
+  padding: 30px;
+  text-align: center;
+}
+
+.what-is-adept img {
+  display: block;
+  height: 180px;
+  margin: 50px auto;
+  width: 180px;
+}
+
+.what-is-adept a {
+  display: inline-block;
+}
+
+@media (max-width: 767px) {
+
+  .what-is-adept {
+    position: relative;
+  }
+
+  .what-is-adept::after {
+    border-bottom: 1px solid lightgray;
+    content: "";
+    height: 80vh;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    bottom: -30px;
+    width: 250px;
+  }
+
+  .what-is-adept:last-child::after {
+    display: none;
+  }
+}
+
+
+// WHAT OTHERS THINK
+.what-others-say {
+  padding: 45px 5px;
+}
+
+.comment {
+  color: #353534;
+  margin: 20px 0;
+  padding: 20px;
+  text-align: center;
+}
+
+.comment:last-child {
+  margin: 0;
+}
+
+.comment p {
+  margin-top: 10px;
+  font-style: italic;
+}

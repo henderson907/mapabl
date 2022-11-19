@@ -1,2 +1,56 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<!-- Banner -->
+<div class="banner">
+  <div class="intro">
+    <h2>A community driven solution for an inclusive future</h2>
+    <form action="#">
+      <label for="search" style="color: #fff; font-weight: lighter;">Find places nearby</label>
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Type postcode or address..." aria-label="Type postcode or address" aria-describedby="search">
+        <button class="input-group-text adept-btn small" id="search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+     </div>
+    </form>
+  </div>
+</div>
+<!-- What is adept -->
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 what-is-adept" id="what">
+        <h3>What is adept?</h3>
+        <p>Adept is a community driven solution that allows you to find and filter venues to your accessibility needs</p>
+        <%= image_tag('magnifier.png', alt: "An image of a magnifier") %>
+        <%= link_to "Learn more", nil, class: "adept-btn large" %>
+    </div>
+    <div class="col-md-4 what-is-adept" id="find">
+        <h3>Find, visit and enjoy!</h3>
+        <p>Find a place that fits your accesibility requirements, visit and have a blast with friends and family</p>
+        <%= image_tag('beer.png', alt: "An image of beer and celebration") %>
+        <%= link_to "Find place", nil, class: "adept-btn large" %>
+    </div>
+    <div class="col-md-4 what-is-adept" id="review">
+        <h3>Review and share!</h3>
+        <p>Adept is a community driven solution that allows you to find and filter venues to your accessibility needs </p>
+        <%= image_tag('star.png', alt: "An image of a star. Rate you favourite places!") %>
+        <%= link_to "Review place", nil, class: "adept-btn large" %>
+    </div>
+  </div>
+</div>
+<!-- What others say -->
+<div class="container-fluid" style="background-color: rgba(0, 129, 167, .1);">
+  <div class="row">
+    <div class="what-others-say col-offset-md-12 text-center">
+      <h3>What do others think?</h3>
+      <div class="comment">
+        <%= image_tag('tagesspiegel_logo.png', width: 250, alt: "Tagesspiegel logo") %>
+        <p>Nostra eu nunc eu ante aliquam dictumst nisl a parturient at a a praesent nisl praesent nullam nisl.</p>
+        <small>- Frank Müller - Chief Editor</small>
+      </div>
+      <div class="comment">
+        <%= image_tag('telegraph_logo.png', width: 250, alt: "The Telegraph logo") %>
+        <p>Eget aptent euismod a luctus parturient ridiculus vestibulum nisi consectetur adipiscing.</p>
+        <small>- Jane Doe - IT Editor</small>
+      </div>
+    </div>
+  </div>
+</div>
