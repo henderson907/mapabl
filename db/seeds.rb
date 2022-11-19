@@ -221,48 +221,50 @@ new_review.venue = Venue.find_by(name: "Lidl")
 new_review.user = User.all[1]
 new_review.save
 
-new_review = Review.new(content: "",
-                        rating: 2)
-new_review.venue = Venue.find_by(name: "")
+new_review = Review.new(content: "The staff were really kind and came round the counter so I could see
+                                  them in my wheelchair!",
+                        rating: 4)
+new_review.venue = Venue.find_by(name: "Asia Gondel")
+new_review.user = User.all[2]
+new_review.save
+
+new_review = Review.new(content: "It's a lot of walking and not many places to sit down",
+                        rating: 3)
+new_review.venue = Venue.find_by(name: "Pergamonmuseum")
 new_review.user = User.all[1]
 new_review.save
 
-Review.create(content: "The staff were really kind and came round the counter so I could see them in my wheelchair!",
-              rating: 4,
-              venue_id: Venue.find_by(name: "Asia Gondel"),
-              user_id: User.find_by(email: "testUser2@test.com"))
+new_review = Review.new(content: "They do special screenings where they turn the volume down! It's great!",
+                        rating: 5)
+new_review.venue = Venue.find_by(name: "CineStar CUBIX")
+new_review.user = User.all[2]
+new_review.save
 
-Review.create(content: "It's a lot of walking and not many places to sit down",
-              rating: 3,
-              venue_id: Venue.find_by(name: "Pergamonmuseum"),
-              user_id: User.find_by(email: "testUser1@test.com"))
-
-Review.create(content: "They do special screenings where they turn the volume down! It's great!",
-              rating: 5,
-              venue_id: Venue.find_by(name: "CineStar CUBIX"),
-              user_id: User.find_by(email: "testUser2@test.com"))
-
-Review.create(content: "There is a screen showing when your order is ready, so I don't have to tell them
+new_review = Review.new(content: "There is a screen showing when your order is ready, so I don't have to tell them
                         that I'm Deaf and can't hear when they call my order number",
-              rating: 4,
-              venue_id: Venue.find_by(name: "Burgermeister Alexanderplatz"),
-              user_id: User.find_by(email: "testUser3@test.com"))
+                        rating: 4)
+new_review.venue = Venue.find_by(name: "Burgermeister Alexanderplatz")
+new_review.user = User.all[3]
+new_review.save
 
-Review.create(content: "There is a step to get to the bathroom and the employees refused to get the ramp.",
-              rating: 2,
-              venue_id: Venue.find_by(name: "Burgermeister Alexanderplatz"),
-              user_id: User.find_by(email: "testUser2@test.com"))
+new_review = Review.new(content: "There is a step to get to the bathroom and the employees refused to get the ramp.",
+                        rating: 1)
+new_review.venue = Venue.find_by(name: "")
+new_review.user = User.all[2]
+new_review.save
 
-Review.create(content: "It was so loud that my son was struggling a lot. The staff tried to put us in a quieter corner
-                        but we could barely hear ourselves.",
-              rating: 3,
-              venue_id: Venue.find_by(name: "Charlotte 1"),
-              user_id: User.find_by(email: "testUser1@test.com"))
+new_review = Review.new(content: "It was so loud that my son was struggling a lot. The staff tried to put us in a
+                                  quieter corner but we could barely hear ourselves.",
+                        rating: 3)
+new_review.venue = Venue.find_by(name: "Charlotte 1")
+new_review.user = User.all[1]
+new_review.save
 
-Review.create(content: "One of the women working there showed me all the books about crocodiles after I told her
-                        they're my special interest. She let me sit and read for ages.",
-              rating: 5,
-              venue_id: Venue.find_by(name: "Dussman das KulturKaufhaus"),
-              user_id: User.find_by(email: "testUser3@test.com"))
+new_review = Review.new(content: "One of the women working there showed me all the books about crocodiles after
+                                  I told her they're my special interest. She let me sit and read for ages.",
+                        rating: 5)
+new_review.venue = Venue.find_by(name: "Dussman das KulturKaufhaus")
+new_review.user = User.all[3]
+new_review.save
 
 puts "Finished! (6/6)"
