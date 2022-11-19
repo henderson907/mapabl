@@ -23,7 +23,6 @@ h3 {
 }
 
 .intro {
-
   position: absolute;
   left: 0;
   right: 0;
@@ -32,8 +31,21 @@ h3 {
 }
 
 .intro form {
-
   margin: 75px 0;
+}
+
+.intro form label {
+  font-weight: bolder;
+  font-size: 18px;
+  margin: 15px 0;
+}
+
+.adept-input {
+  border: none;
+  border-radius: 6px;
+  font-style: italic;
+  font-size: 14px;
+  padding: 15px 15px;
 }
 
 // WHAT IS ADEPT
@@ -45,7 +57,9 @@ h3 {
 
 .what-is-adept img {
   display: block;
+  height: 180px;
   margin: 50px auto;
+  width: 180px;
 }
 
 .what-is-adept a {
