@@ -26,7 +26,7 @@
         <h3>Find, visit and enjoy!</h3>
         <p>Find a place that fits your accesibility requirements, visit and have a blast with friends and family</p>
         <%= image_tag('beer.png', alt: "An image of beer and celebration") %>
-        <%= link_to "Find place", nil, class: "adept-btn large" %>
+        <%= link_to "Find place", venues_path, class: "adept-btn large" %>
     </div>
     <div class="col-md-4 what-is-adept" id="review">
         <h3>Review and share!</h3>
@@ -42,12 +42,16 @@
     <div class="what-others-say col-offset-md-12 text-center">
       <h3>What do others think?</h3>
       <div class="comment">
-        <%= image_tag('tagesspiegel_logo.png', width: 250, alt: "Tagesspiegel logo") %>
+        <%= link_to ("https://www.tagesspiegel.de/") do %>
+          <%= image_tag('tagesspiegel_logo.png', width: 250, alt: "Tagesspiegel logo") %>
+        <% end %>
         <p>Nostra eu nunc eu ante aliquam dictumst nisl a parturient at a a praesent nisl praesent nullam nisl.</p>
         <small>- Frank Müller - Chief Editor</small>
       </div>
       <div class="comment">
-        <%= image_tag('telegraph_logo.png', width: 250, alt: "The Telegraph logo") %>
+        <%= link_to ("https://www.telegraph.co.uk/") do %>
+          <%= image_tag('telegraph_logo.png', width: 250, alt: "The Telegraph logo") %>
+        <% end %>
         <p>Eget aptent euismod a luctus parturient ridiculus vestibulum nisi consectetur adipiscing.</p>
         <small>- Jane Doe - IT Editor</small>
       </div>
