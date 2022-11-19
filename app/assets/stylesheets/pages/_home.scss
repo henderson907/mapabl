@@ -1,21 +1,8 @@
-// Specific CSS for your home-page
-body {
-  background-color: white;
-}
-
-h2 {
-  font-size: 210%;
-}
-
-h3 {
-  font-weight: bold;
-}
-
 // BANNER
 .banner {
   background-attachment: fixed;
-  background-image: linear-gradient(rgba(0, 0, 0, .7), rgba(255, 255, 255, .1)), url('elevate.jpg');
-  background-position: 50% 50%;
+  background-image: linear-gradient(rgba(0, 0, 0, .5) 60%, rgba(255, 255, 255, .1) 85%), url('elevate.jpg');
+  background-position: 50% 0%;
   background-repeat: no-repeat;
   background-size: cover;
   height: calc(100vh - 50px);
@@ -23,33 +10,59 @@ h3 {
 }
 
 .banner h2 {
-  color: white;
+  color: $white;
+  text-shadow: 0px 0px 10px black;
 }
 
 .intro {
   position: absolute;
   left: 0;
   right: 0;
-  margin: 10% auto;
+  margin: 35px auto;
   width: 85%;
 }
 
 .intro form {
-  margin: 75px 0;
+  margin: 40px 0;
 }
 
 .intro form label {
   font-weight: bolder;
   font-size: 18px;
-  margin: 15px 0;
+  margin: 10px 0;
+  text-shadow: 0px 0px 10px black;
 }
 
-.adept-input {
+.intro form input {
   border: none;
   border-radius: 6px;
-  font-style: italic;
   font-size: 15px;
   padding: 15px 15px;
+}
+
+.intro form input::placeholder {
+  font-style: italic;
+}
+
+@media (min-width: 1024px) {
+
+  .banner {
+    background-image: linear-gradient(rgba(0, 0, 0, .5) 60%, rgba(255, 255, 255, .1) 85%), url('elevate-small.jpg');
+  }
+
+  .banner h2 {
+    font-size: 300%;
+    text-align: center;
+  }
+
+  .intro {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto auto;
+    transform: translateY(50%);
+    width: 50%;
+  }
 }
 
 // WHAT IS ADEPT
