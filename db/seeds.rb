@@ -85,7 +85,7 @@ new_venue = Venue.new(name: "Charlotte 1", address: "Charlottenstraße 1, 10969 
 new_venue.venue_category = VenueCategory.find_by(category: "Restaurant")
 new_venue.save
 
-new_venue = Venue.new(name: "Burgermeister Alexanderplatz", address: "Dirckenstraße 113, 10178 Berlin, Germany")
+new_venue = Venue.new(name: "Burgermeister Alexanderplatz", address: "Dircksenstraße 113, 10178 Berlin")
 new_venue.venue_category = VenueCategory.find_by(category: "Restaurant")
 new_venue.save
 
