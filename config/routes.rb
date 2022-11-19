@@ -5,5 +5,7 @@ Rails.application.routes.draw do
   get "about", to: "pages#about"
   get "my_profile", to: "pages#my_profile"
 
-  resources :venues
+  resources :venues do
+    resources :reviews
+  end
 end
