@@ -3,4 +3,6 @@ class Venue < ApplicationRecord
   has_many :reviews
   has_many :venue_features
   has_many :accessibility_features, through: :venue_features
+  geocoded_by :address
+  after_validation :geocode, if: :will_save_change_to_address?
 end
