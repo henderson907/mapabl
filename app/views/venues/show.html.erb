@@ -1,0 +1,31 @@
+
+<%# TODO: add image %>
+<strong>Name:</strong> <%= @venue.name %>
+<br>
+<strong>Address:</strong> <%= @venue.address %>
+<br>
+<strong>Category:</strong> <%= @venue.venue_category.category %>
+<br>
+<strong>Review:</strong>
+
+  <% if @venue.reviews.count == 0 %>
+    <small>No reviews to show</small>
+  <% else %>
+    <ul>
+      <% @venue.reviews.each do |review| %>
+        <li><strong>Comment:</strong><%= review.content %></li>
+        <li><strong>Rating:</strong><%= review.rating %></li>
+        <li><strong>User: </strong><%= review.user.first_name %> <%= review.user.last_name %></li>
+      <% end %>
+    </ul>
+  <% end %>
+<br>
+
+<strong>Features</strong>
+<ul>
+  <% @venue.accessibility_features.each do |feature| %>
+    <li><%= feature.feature %></li>
+  <% end %>
+</ul>
+
+<%= link_to "Back", :back %>
