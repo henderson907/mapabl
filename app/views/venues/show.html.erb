@@ -7,7 +7,6 @@
 <strong>Category:</strong> <%= @venue.venue_category.category %>
 <br>
 <strong>Review:</strong>
-
   <% if @venue.reviews.count == 0 %>
     <small>No reviews to show</small>
   <% else %>
@@ -28,4 +27,5 @@
   <% end %>
 </ul>
 
+<%= link_to "Add Review", new_venue_review_path(@venue) %>
 <%= link_to "Back", :back %>
