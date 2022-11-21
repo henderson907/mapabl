@@ -1,3 +1,5 @@
+
+require "open-uri"
 # Cleaning the database of previous entries
 puts "Clearing your database..."
 Review.destroy_all
@@ -49,8 +51,10 @@ User.create(first_name: "Lee", last_name: "Murr",
 puts "Finished seeding User (3/6)..."
 
 # VENUES
+file = URI.open("https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg")
 new_venue = Venue.new(name: "Lidl", address: "Leipziger Str. 42, 10117 Berlin, Germany")
 new_venue.venue_category = VenueCategory.find_by(category: "Supermarket")
+new_venue.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 new_venue.save
 
 new_venue = Venue.new(name: "Asia Gondel", address: "Brückenstraße. 1B, 10179 Berlin Germany")

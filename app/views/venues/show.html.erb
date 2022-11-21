@@ -1,5 +1,7 @@
 
 <%# TODO: add image %>
+<%= cl_image_tag @venue.photo.key, height: 300, width: 400, crop: :fill %>
+<br>
 <strong>Name:</strong> <%= @venue.name %>
 <br>
 <strong>Address:</strong> <%= @venue.address %>
