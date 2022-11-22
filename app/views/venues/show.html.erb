@@ -28,8 +28,8 @@
   <div class="location my-4">
     <p><i class="fa-solid fa-location-dot"></i> <%= @venue.address %></p>
   </div>
-  <div class="features my-4">
-    <strong>Features</strong>
+  <div class="features my-5">
+    <h5>Features</h5>
     <ul>
       <% @venue.accessibility_features.each do |feature| %>
         <li><%= feature.feature %></li>
@@ -37,18 +37,23 @@
     </ul>
   </div>
   <!-- Reviews -->
-  <div class="reviews my-4">
-    <strong>Reviews</strong>
+  <div class="reviews my-5">
+    <h5>Reviews</h5>
     <% if @venue.reviews.count == 0 %>
       <p>No reviews yet</p>
     <% else %>
-      <ul>
-        <% @venue.reviews.each do |review| %>
-          <li><strong>Comment:</strong> <%= review.content %></li>
-          <li><strong>Rating:</strong> <%= review.rating %></li>
-          <li><strong>User:</strong> <%= review.user.first_name %> <%= review.user.last_name %></li>
-        <% end %>
-      </ul>
+      <% @venue.reviews.each do |review| %>
+        <div class="review">
+          <p><em><%= review.user.first_name %> <%= review.user.last_name %></em></p>
+          <p><%= review.content %></p>
+          <p>
+            <% for i in 1..review.rating %>
+                <i class="fa-solid fa-star" style="color: #F8BD45;"></i>
+              <% end %>
+          </p>
+          <small class="text-right"><%= review.created_at.strftime('%m/%d/%Y - %H:%M') %></small>
+        </div>
+      <% end %>
     <% end %>
   </div>
   <!-- Back -->
