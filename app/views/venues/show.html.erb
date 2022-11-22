@@ -1,0 +1,58 @@
+<div class="venue-banner">
+  <% if @venue.photos.count > 0 %>
+   <%= cl_image_tag @venue.photos.first.key, :quality => "auto", :fetch_format=>:auto %>
+  <% end %>
+</div>
+
+<div class="container py-5 px-4">
+  <!-- Main-->
+  <h3><%= @venue.name %></h3>
+  <p><%= @venue.venue_category.category %></p>
+  <div class="d-flex justify-content-between align-items-top my-4">
+      <% if @venue.reviews.count == 0 %>
+        No reviews yet
+     <% else %>
+        <div>
+          <i class="fa-solid fa-star" style="color: #F8BD45;"></i>
+          <%= pluralize(@venue.reviews.count, 'review') %>
+        </div>
+     <% end %>
+      <%= link_to new_venue_review_path(@venue) do %>
+        <i class="fa-solid fa-pencil"></i> Add review
+      <% end %>
+      <%= link_to (nil) do %>
+        <i class="fa-regular fa-heart"></i> Save
+      <% end %>
+  </div>
+  <!-- Category / Address -->
+  <div class="location my-4">
+    <p><i class="fa-solid fa-location-dot"></i> <%= @venue.address %></p>
+  </div>
+  <div class="features my-4">
+    <strong>Features</strong>
+    <ul>
+      <% @venue.accessibility_features.each do |feature| %>
+        <li><%= feature.feature %></li>
+      <% end %>
+    </ul>
+  </div>
+  <!-- Reviews -->
+  <div class="reviews my-4">
+    <strong>Reviews</strong>
+    <% if @venue.reviews.count == 0 %>
+      <p>No reviews yet</p>
+    <% else %>
+      <ul>
+        <% @venue.reviews.each do |review| %>
+          <li><strong>Comment:</strong> <%= review.content %></li>
+          <li><strong>Rating:</strong> <%= review.rating %></li>
+          <li><strong>User:</strong> <%= review.user.first_name %> <%= review.user.last_name %></li>
+        <% end %>
+      </ul>
+    <% end %>
+  </div>
+  <!-- Back -->
+  <%= link_to :back do %>
+    <i class="fa-solid fa-fw fa-arrow-left"></i> Back
+  <% end %>
+</div>
