@@ -1,6 +1,6 @@
 <div class="venue-banner">
-  <% if !@venue.photo.key.nil? %>
-   <%= cl_image_tag @venue.photo.key, :quality => "auto", :fetch_format=>:auto %>
+  <% if @venue.photos.count > 0 %>
+   <%= cl_image_tag @venue.photos.first.key, :quality => "auto", :fetch_format=>:auto %>
   <% end %>
 </div>
 

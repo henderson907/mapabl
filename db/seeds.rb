@@ -54,7 +54,7 @@ puts "Finished seeding User (3/6)..."
 file = URI.open("https://s.marketwatch.com/public/resources/MWimages/MW-FM649_lidl_s_ZG_20170517111905.jpg")
 new_venue = Venue.new(name: "Lidl", address: "Leipziger Str. 42, 10117 Berlin, Germany")
 new_venue.venue_category = VenueCategory.find_by(category: "Supermarket")
-new_venue.photo.attach(io: file, filename: "lidl.jpg", content_type: "image/jpg")
+new_venue.photos.attach(io: file, filename: "lidl.jpg", content_type: "image/jpg")
 new_venue.save
 file.close
 
@@ -69,7 +69,7 @@ new_venue.save
 file = URI.open("https://1.bp.blogspot.com/-rLDlR08j1Hc/U52wCK0kexI/AAAAAAAAJOM/GIggQda22Ag/s1600/Museums+Pergamon+Berlin+P1010523.JPG")
 new_venue = Venue.new(name: "Pergamonmuseum", address: "Bodestraße 1-3, 10178 Berlin, Germany")
 new_venue.venue_category = VenueCategory.find_by(category: "Museum")
-new_venue.photo.attach(io: file, filename: "pergamon.jpg", content_type: "image/jpg")
+new_venue.photos.attach(io: file, filename: "pergamon.jpg", content_type: "image/jpg")
 new_venue.save
 file.close
 
