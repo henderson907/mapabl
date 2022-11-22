@@ -1,2 +1,10 @@
-<h2><%= venue.name %></h2>
-<%= link_to "More Details", venue_path(venue) %>
+<div class="info-container">
+  <% if venue.photos.first == nil %>
+    <%= image_tag('venue_placeholder_img.jpg', alt: "An image of a building outline") %>
+  <% else %>
+    <%= cl_image_tag venue.photos.first.key %>
+  <% end %>
+  <h2><%= venue.name %></h2>
+  <%= venue.address %>
+  <%= link_to "More Details", venue_path(venue) %>
+</div>
