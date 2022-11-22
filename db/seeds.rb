@@ -51,11 +51,12 @@ User.create(first_name: "Lee", last_name: "Murr",
 puts "Finished seeding User (3/6)..."
 
 # VENUES
-file = URI.open("https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg")
+file = URI.open("https://s.marketwatch.com/public/resources/MWimages/MW-FM649_lidl_s_ZG_20170517111905.jpg")
 new_venue = Venue.new(name: "Lidl", address: "Leipziger Str. 42, 10117 Berlin, Germany")
 new_venue.venue_category = VenueCategory.find_by(category: "Supermarket")
-new_venue.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
+new_venue.photo.attach(io: file, filename: "lidl.jpg", content_type: "image/jpg")
 new_venue.save
+file.close
 
 new_venue = Venue.new(name: "Asia Gondel", address: "Brückenstraße. 1B, 10179 Berlin Germany")
 new_venue.venue_category = VenueCategory.find_by(category: "Restaurant")
@@ -65,9 +66,12 @@ new_venue = Venue.new(name: "Schäfer's", address: "Wallstraße 14, 10179 Berlin
 new_venue.venue_category = VenueCategory.find_by(category: "Bakery")
 new_venue.save
 
+file = URI.open("https://1.bp.blogspot.com/-rLDlR08j1Hc/U52wCK0kexI/AAAAAAAAJOM/GIggQda22Ag/s1600/Museums+Pergamon+Berlin+P1010523.JPG")
 new_venue = Venue.new(name: "Pergamonmuseum", address: "Bodestraße 1-3, 10178 Berlin, Germany")
 new_venue.venue_category = VenueCategory.find_by(category: "Museum")
+new_venue.photo.attach(io: file, filename: "pergamon.jpg", content_type: "image/jpg")
 new_venue.save
+file.close
 
 new_venue = Venue.new(name: "CineStar CUBIX", address: "Rathausstraße 1, 10178 Berlin, Germany")
 new_venue.venue_category = VenueCategory.find_by(category: "Cinema")
@@ -237,6 +241,13 @@ new_review = Review.new(content: "It's a lot of walking and not many places to s
 new_review.venue = Venue.find_by(name: "Pergamonmuseum")
 new_review.user = User.all[1]
 new_review.save
+
+new_review = Review.new(content: "We had Audio Guides and staff support during the whole visit. I'll definitely come back!",
+  rating: 5)
+new_review.venue = Venue.find_by(name: "Pergamonmuseum")
+new_review.user = User.all[2]
+new_review.save
+
 
 new_review = Review.new(content: "They do special screenings where they turn the volume down! It's great!",
                         rating: 5)
