@@ -6,7 +6,7 @@ class VenuesController < ApplicationController
       {
         lat: venue.latitude,
         lng: venue.longitude,
-        info_window: render_to_string(partial: "info_window", locals: {venue: venue}),
+        info_window: render_to_string(partial: "info_window", locals: { venue: venue }),
         image_url: helpers.asset_url("custom-map-marker.png")
       }
     end

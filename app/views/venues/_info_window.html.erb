@@ -1,10 +1,14 @@
 <div class="info-container">
   <% if venue.photos.first == nil %>
-    <%= image_tag('venue_placeholder_img.jpg', alt: "An image of a building outline") %>
+    <%= image_tag('venue_placeholder_img.jpg', alt: "An image of a building outline", class: "venue-image") %>
   <% else %>
-    <%= cl_image_tag venue.photos.first.key %>
+    <%= cl_image_tag venue.photos.first.key, alt: "An image of #{venue.name}", class: "venue-image" %>
   <% end %>
-  <h2><%= venue.name %></h2>
-  <%= venue.address %>
-  <%= link_to "More Details", venue_path(venue) %>
+  <div class="info-container-right">
+    <h3><%= venue.name %></h3>
+    <p><%= venue.address %></p>
+    <div class="link-box">
+      <%= link_to "More Details", venue_path(venue), class:"adept-btn medium" %>
+    </div>
+  </div>
 </div>
