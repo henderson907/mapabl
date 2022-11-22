@@ -5,8 +5,8 @@
     <%= cl_image_tag venue.photos.first.key, alt: "An image of #{venue.name}", class: "venue-image" %>
   <% end %>
   <div class="info-container-right">
-    <h3><%= venue.name %></h3>
-    <p><%= venue.address %></p>
+    <h5><%= venue.name %></h5>
+    <p><i class="fa-solid fa-location-dot"></i> <%= venue.address %></p>
     <div class="link-box">
       <%= link_to "More Details", venue_path(venue), class:"adept-btn medium" %>
     </div>

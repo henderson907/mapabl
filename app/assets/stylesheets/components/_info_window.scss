@@ -1,14 +1,14 @@
 .info-container {
   display: flex;
   background-color: $white;
-  width: 300px;
+  width: 310px;
   height: 150px;
   border: 1px solid black;
-  align-items: center;
+  justify-content: center;
 }
 
 .info-container-right {
-  padding: 5px;
+  margin: 5px;
 
   .link-box {
     height: 70px;
