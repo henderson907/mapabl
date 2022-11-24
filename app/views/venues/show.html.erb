@@ -13,7 +13,7 @@
         No reviews yet
      <% else %>
         <div>
-          <i class="fa-solid fa-star" style="color: #F8BD45;"></i>
+          <i class="fa-solid fa-star fa-fw" style="color: #F8BD45;"></i>
           <%= pluralize(@venue.reviews.count, 'review') %>
         </div>
      <% end %>
@@ -26,15 +26,12 @@
   </div>
   <!-- Category / Address -->
   <div class="location my-4">
-    <p><i class="fa-solid fa-location-dot"></i> <%= @venue.address %></p>
+    <p><i class="fa-solid fa-fw fa-location-dot"></i> <%= @venue.address %></p>
   </div>
   <div class="features my-5">
-    <h5>Features</h5>
-    <ul>
-      <% @venue.accessibility_features.each do |feature| %>
-        <li><%= feature.feature %></li>
+      <% @venue.accessibility_features.sort_by(&:feature).each do |feature| %>
+        <span class="bubble"><%= feature.feature %></span>
       <% end %>
-    </ul>
   </div>
   <!-- Reviews -->
   <div class="reviews my-5">
@@ -48,7 +45,7 @@
           <p><%= review.content %></p>
           <p>
             <% for i in 1..review.rating %>
-                <i class="fa-solid fa-star" style="color: #F8BD45;"></i>
+                <i class="fa-solid fa-star fa-fw" style="color: #F8BD45;"></i>
               <% end %>
           </p>
           <small class="text-right"><%= review.created_at.strftime('%d/%m/%Y - %H:%M') %></small>
