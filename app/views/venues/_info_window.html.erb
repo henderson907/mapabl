@@ -7,8 +7,6 @@
   <div class="info-container-right">
     <h5><%= venue.name %></h5>
     <p><i class="fa-solid fa-location-dot"></i> <%= venue.address %></p>
-    <div class="link-box">
-      <%= link_to "More Details", venue_path(venue), class:"adept-btn medium" %>
-    </div>
+    <%= link_to "More Details", venue_path(venue), class:"adept-btn medium info-cont-link" %>
   </div>
 </div>
