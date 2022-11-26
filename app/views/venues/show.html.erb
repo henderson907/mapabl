@@ -1,3 +1,5 @@
+<% title @venue.name %>
+
 <div class="venue-banner">
   <% if @venue.photos.count > 0 %>
    <%= cl_image_tag @venue.photos.first.key, :quality => "auto", :fetch_format=>:auto %>
