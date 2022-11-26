@@ -12,16 +12,18 @@
       <div class="user py-3 mb-5">
 
         <!-- Photo-->
-        <% if @user.photo.nil?  %>
+        <% if @user.photo.attached?  %>
           <%= cl_image_tag @user.photo.key,
                     :quality => "auto",
-                    :fetch_format=>:auto %>
+                    :fetch_format=>:auto,
+                    :class => "avatar-large"
+                    %>
         <% else %>
           <img src="https://www.pngall.com/wp-content/uploads/5/Profile-PNG-File.png" alt="Default profile picture" width="200"/>
         <% end %>
 
         <!-- Full name-->
-        <p><%= @user.first_name %> <%= @user.last_name %></p>
+        <h3><%= @user.first_name %> <%= @user.last_name %></h3>
 
         <!-- Edit profile -->
         <%= link_to "Edit profile", edit_user_registration_path %>
