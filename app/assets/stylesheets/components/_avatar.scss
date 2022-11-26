@@ -5,8 +5,10 @@
 }
 .avatar-large {
   width: 200px;
+  height: 200px;
   border-radius: 50%;
   margin-bottom: 30px;
+  object-fit: cover;
 }
 .avatar-bordered {
   width: 40px;
