@@ -9,6 +9,7 @@
     </div>
     <div class="profile">
       <div class="user py-3 mb-5">
+
         <!-- Photo-->
         <% if @user.photo.nil?  %>
           <%= cl_image_tag @user.photo.key,
@@ -27,7 +28,7 @@
 
       <!-- My reviews-->
       <h3>My reviews</h3>
-      <% if @user.reviews.nil? %>
+      <% if @user.reviews.count > 0 %>
         <% @user.reviews.each do |review| %>
           <div class="review">
             <%= review.content %>
