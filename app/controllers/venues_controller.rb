@@ -1,8 +1,16 @@
 class VenuesController < ApplicationController
   def index
-    @venues = Venue.all
+    @accessibility_features = AccessibilityFeature.all
+    @venues = []
 
-    @markers = @venues.geocoded.map do |venue|
+    @accessibility_features.each do |feature|
+      venue_filter(feature.feature) if params["feature#{feature.id}"]
+    end
+
+    @venues = Venue.all if @venues.empty?
+
+    ## hey
+    @markers = @venues.map do |venue|
       {
         lat: venue.latitude,
         lng: venue.longitude,
@@ -14,5 +22,12 @@ class VenuesController < ApplicationController
 
   def show
     @venue = Venue.find(params[:id])
+  end
+
+  def venue_filter(feature_name)
+    venue_features = VenueFeature.accessibility_feature_search(feature_name)
+    venue_features.each do |feature|
+      @venues << feature.venue
+    end
   end
 end
