@@ -1,0 +1,55 @@
+<% if current_user.id == @user.id %>
+  <div class="container py-5 px-4">
+    <div class="d-flex justify-content-between align-items-center">
+        <%= link_to :back do %>
+          <i class="fa-solid fa-fw fa-arrow-left"></i> Back
+        <% end %>
+      <h2>My profile</h2>
+      <div></div>
+    </div>
+    <div class="profile">
+      <div class="user py-3 mb-5">
+
+        <!-- Photo-->
+        <% if @user.photo.nil?  %>
+          <%= cl_image_tag @user.photo.key,
+                    :quality => "auto",
+                    :fetch_format=>:auto %>
+        <% else %>
+          <img src="https://www.pngall.com/wp-content/uploads/5/Profile-PNG-File.png" alt="Default profile picture" width="200"/>
+        <% end %>
+
+        <!-- Full name-->
+        <p><%= @user.first_name %> <%= @user.last_name %></p>
+
+        <!-- Edit profile -->
+        <%= link_to "Edit profile", edit_user_registration_path %>
+      </div>
+
+      <!-- My reviews-->
+      <h3>My reviews</h3>
+      <% if @user.reviews.count > 0 %>
+        <% @user.reviews.each do |review| %>
+          <div class="review">
+            <%= review.content %>
+            <p>
+              <% for i in 1..review.rating %>
+                <i class="fa-solid fa-star" style="color: #F8BD45;"></i>
+              <% end %>
+            </p>
+            <p><%= link_to review.venue.name, venue_path(review.venue) %></p>
+            <p><%= review.created_at.strftime('%d/%m/%Y - %H:%M') %></p>
+          </div>
+        <% end %>
+      <% else %>
+        <p>No reviews (yet!)</p>
+      <% end %>
+
+      <!-- My saved venues -->
+      <h3>My saved venues</h3>
+      <p>No saved venues</p>
+    </div>
+  </div>
+<% else %>
+  <% redirect_to "root#index " %>
+<% end %>

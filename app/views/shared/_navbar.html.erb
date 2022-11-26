@@ -28,7 +28,7 @@
       <ul class="navbar-nav mb-2 mb-lg-0" aria-label="User settings">
         <% if user_signed_in? %>
           <li class="nav-item">
-            <%= link_to (nil), class: "nav-link" do %>
+            <%= link_to user_path(current_user), class: "nav-link" do %>
               <i class="fa-solid fa-user fa-fw d-lg-none d-inline-block"></i>My profile
             <% end %>
           </li>
