@@ -11,8 +11,10 @@
     <%= simple_form_for [@venue] do |f| %>
       <%= f.input :name %>
       <%= f.input :address %>
-      <%= f.association :venue_category, collection: VenueCategory.order(:category).map { |c| c.category}, selected: :first %>
-      <%= f.association :accessibility_features, collection: AccessibilityFeature.order(:feature).map { | f | f.feature}, as: :check_boxes %>
+      <%= f.association :venue_category, label_method: :category, value_method: :id, selected: :first, include_blank: false %>
+      <%= f.association :accessibility_features, label_method: :feature, value_method: :id, as: :check_boxes, include_blank: false %>
+      <%= f.input :latitude %>
+      <%= f.input :longitude %>
       <%= f.submit "Create venue", class: "btn adept-btn text-center" %>
     <% end %>
   </div>

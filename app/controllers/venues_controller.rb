@@ -1,4 +1,6 @@
 class VenuesController < ApplicationController
+  before_action :venue_params, only: [:create]
+
   def index
     @accessibility_features = AccessibilityFeature.all
     @venues = []
@@ -38,11 +40,12 @@ class VenuesController < ApplicationController
   def create
     @venue = Venue.new(venue_params)
     @venue.save
+    redirect_to venue_path(@venue)
   end
 
   private
 
   def venue_params
-    params.require(:venue).permit(:address, :latitude, :longitude, :name, :category_id)
+    params.require(:venue).permit(:address, :latitude, :longitude, :name, :venue_category_id, :accessibility_features)
   end
 end
