@@ -1,0 +1,18 @@
+<% content_for :meta_title, "Adept | New venue" %>
+<div class="container py-5 px-4">
+  <div class="d-flex justify-content-between align-items-center">
+      <%= link_to :back do %>
+        <i class="fa-solid fa-fw fa-arrow-left"></i> Back
+      <% end %>
+    <h2>New venue</h2>
+    <div></div>
+  </div>
+  <div class="py-3">
+    <%= simple_form_for [@venue] do |f| %>
+      <%= f.input :name %>
+      <%= f.input :address %>
+      <%= f.input :venue_category_id, collection: @categories, selected: :first %>
+      <%= f.submit "Create venue", class: "btn adept-btn text-center" %>
+    <% end %>
+  </div>
+</div>
