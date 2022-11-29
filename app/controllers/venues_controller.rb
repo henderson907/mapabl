@@ -30,4 +30,20 @@ class VenuesController < ApplicationController
       @venues << feature.venue
     end
   end
+
+  def new
+    @categories = VenueCategory.all.sort_by(&:category).map { |c| c.category }
+    @venue = Venue.new
+  end
+
+  def create
+    @venue = Venue.new(venue_params)
+    @venue.save
+    redirect_to venue_path(@venue)
+  end
+
+  private
+  def venue_params
+    params.require(:venue).permit(:address, :latitude, :longitude, :name, :category_id)
+  end
 end
