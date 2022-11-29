@@ -9,6 +9,7 @@
   </div>
   <div class="py-3">
     <%= simple_form_for [@venue] do |f| %>
+      <%= f.input :photos, as: :file, required: false, autofocus: true %>
       <%= f.input :name %>
       <%= f.input :address %>
       <%= f.association :venue_category, label_method: :category, value_method: :id, selected: :first, include_blank: false %>
