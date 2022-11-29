@@ -2,3 +2,15 @@
   display: flex;
   justify-content: space-around;
 }
+
+.filter-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-form-button {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 25px;
+  margin: 15px;
+}
