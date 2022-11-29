@@ -5,7 +5,14 @@ class VenuesController < ApplicationController
     @venues = Venue.all.to_a
 
     filter_options
+    set_markers
+  end
 
+  def show
+    @venue = Venue.find(params[:id])
+  end
+
+  def set_markers
     @markers = @venues.map do |venue|
       {
         lat: venue.latitude,
@@ -14,14 +21,6 @@ class VenuesController < ApplicationController
         image_url: helpers.asset_url("custom-map-marker.png")
       }
     end
-  end
-
-  def show
-    @venue = Venue.find(params[:id])
-  end
-
-  def set_markers
-
   end
 
   def filter_options
@@ -48,6 +47,8 @@ class VenuesController < ApplicationController
     venue_features = VenueFeature.accessibility_feature_search(feature_name)
     venue_features = venue_features.to_a
     venues_with_access_features = []
+    # This is needed as venue_features is a join table and so PG search doesn't actually return the venues themselves
+    # Therefore we extract them from the returned array of instances
     venue_features.each do |feature|
       venues_with_access_features << feature.venue
     end
