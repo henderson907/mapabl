@@ -4,7 +4,7 @@
   <div class="accordion-item">
     <h2 class="accordion-header" id="panelsStayOpen-headingOne">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false" aria-controls="panelsStayOpen-collapseOne">
-        Filter by Accessibility Feature
+        Filter
       </button>
     </h2>
     <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingOne">
@@ -16,20 +16,6 @@
               <label for="<% feature %>"><%= feature.feature %></label>
             </div>
           <% end %>
-         <input name="commit" type="submit" value="Submit Preferences" data-disable-with="Search" />
-        </form>
-      </div>
-    </div>
-  </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-        Filter by Type of Venue
-      </button>
-    </h2>
-    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
-      <div class="accordion-body">
-        <form>
           <% @venue_categories.each do |category| %>
             <div class="form-check">
               <input type="checkbox" id="" name="category<%= category.id %>" value="1" />
