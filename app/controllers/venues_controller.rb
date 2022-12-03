@@ -10,6 +10,13 @@ class VenuesController < ApplicationController
     filter_options
     set_markers
 
+  end
+
+  def show
+    @venue = Venue.find(params[:id])
+  end
+
+  def set_markers
     if params[:query].present?
       sql_query = <<~SQL
         venues.address ILIKE :query
