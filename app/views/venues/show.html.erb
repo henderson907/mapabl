@@ -30,9 +30,13 @@
     <p><i class="fa-solid fa-fw fa-location-dot"></i> <%= @venue.address %></p>
   </div>
   <div class="features my-5">
-      <% @venue.accessibility_features.sort_by(&:feature).each do |feature| %>
-        <span class="bubble"><%= feature.feature %></span>
-      <% end %>
+      <% if @venue.accessibility_features.empty? %>
+        Sorry! No accessibility features reported by other users
+      <% else %>
+        <% @venue.accessibility_features.sort_by(&:feature).each do |feature| %>
+          <span class="bubble"><%= feature.feature %></span>
+        <% end %>
+      <%  end %>
   </div>
   <!-- Reviews -->
   <div class="reviews my-5">

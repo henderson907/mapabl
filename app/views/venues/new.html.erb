@@ -14,8 +14,6 @@
       <%= f.input :address %>
       <%= f.association :venue_category, label_method: :category, value_method: :id, selected: :first, include_blank: false %>
       <%= f.association :accessibility_features, label_method: :feature, value_method: :id, as: :check_boxes, include_blank: false %>
-      <%= f.input :latitude %>
-      <%= f.input :longitude %>
       <%= f.submit "Create venue", class: "btn adept-btn text-center" %>
     <% end %>
   </div>
