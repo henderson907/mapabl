@@ -9,7 +9,6 @@ class VenuesController < ApplicationController
 
     filter_options
     set_markers
-  end
 
     if params[:query].present?
       sql_query = <<~SQL
@@ -20,6 +19,7 @@ class VenuesController < ApplicationController
     end
 
     @venues = Venue.all if @venues.empty?
+  end
 
   def show
     @venue = Venue.find(params[:id])
