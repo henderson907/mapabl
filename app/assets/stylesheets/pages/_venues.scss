@@ -1,0 +1,28 @@
+.accordion-body {
+  background-color: $white !important;
+  max-width: 100%;
+}
+
+.filter-menu {
+  display: flex;
+  justify-content: space-around;
+}
+
+.filter-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-form-button {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 25px;
+  margin: 15px;
+}
+
+.filter-option-btn {
+  background-color: $white;
+  border-radius: 10px;
+  margin: 3px;
+  color: $black;
+}
