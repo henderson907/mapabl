@@ -16,6 +16,7 @@
                               rgba(0, 129, 167, 0.1) 40%,
                               rgba(0, 129, 167, 0.1)
                               );
+    width: 300px;
 
   .info-cont-link {
     position: absolute;
@@ -35,8 +36,12 @@
 
 .venue-image {
   object-fit: cover;
-  width: 100px;
+  width: 100%;
   height: 150px;
   border-bottom-left-radius: 10px;
   border-top-left-radius: 10px;
+}
+
+.mapboxgl-popup-close-button {
+  display: none !important;
 }
