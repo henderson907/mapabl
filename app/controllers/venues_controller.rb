@@ -9,7 +9,6 @@ class VenuesController < ApplicationController
 
     filter_options
     set_markers
-
   end
 
   def show
@@ -26,10 +25,6 @@ class VenuesController < ApplicationController
     end
 
     @venues = Venue.all if @venues.empty?
-  end
-
-  def show
-    @venue = Venue.find(params[:id])
   end
 
   def set_markers
@@ -100,6 +95,6 @@ class VenuesController < ApplicationController
   private
 
   def venue_params
-    params.require(:venue).permit(:address, :latitude, :longitude, :name, :venue_category_id, :accessibility_features, :photos)
+    params.require(:venue).permit(:address, :name, :venue_category_id, :venue_features, :photos)
   end
 end
