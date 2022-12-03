@@ -1,6 +1,6 @@
 class VenuesController < ApplicationController
+  before_action :venue_params, only: [:create]
   skip_before_action :authenticate_user!, only: [:index, :show]
-
 
   def index
     @accessibility_features = AccessibilityFeature.all
@@ -39,5 +39,21 @@ class VenuesController < ApplicationController
     venue_features.each do |feature|
       @venues << feature.venue
     end
+  end
+
+  def new
+    @venue = Venue.new
+  end
+
+  def create
+    @venue = Venue.new(venue_params)
+    @venue.save
+    redirect_to venue_path(@venue)
+  end
+
+  private
+
+  def venue_params
+    params.require(:venue).permit(:address, :latitude, :longitude, :name, :venue_category_id, :accessibility_features, :photos)
   end
 end
