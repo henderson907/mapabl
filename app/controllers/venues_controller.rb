@@ -11,7 +11,6 @@ class VenuesController < ApplicationController
     set_markers
   end
 
-<<<<<<< HEAD
     if params[:query].present?
       sql_query = <<~SQL
         venues.address ILIKE :query
@@ -22,13 +21,11 @@ class VenuesController < ApplicationController
 
     @venues = Venue.all if @venues.empty?
 
-=======
   def show
     @venue = Venue.find(params[:id])
   end
 
   def set_markers
->>>>>>> fixed error where you could search for either a category or by accessibility criteria
     @markers = @venues.map do |venue|
       {
         lat: venue.latitude,
