@@ -8,15 +8,15 @@ class VenuesController < ApplicationController
     @venues = Venue.all.to_a
 
     filter_options
+    filter_markers
     set_markers
-
   end
 
   def show
     @venue = Venue.find(params[:id])
   end
 
-  def set_markers
+  def filter_markers
     if params[:query].present?
       sql_query = <<~SQL
         venues.address ILIKE :query
@@ -26,10 +26,6 @@ class VenuesController < ApplicationController
     end
 
     @venues = Venue.all if @venues.empty?
-  end
-
-  def show
-    @venue = Venue.find(params[:id])
   end
 
   def set_markers
