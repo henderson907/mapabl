@@ -1,4 +1,7 @@
 class VenuesController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:index, :show]
+
+
   def index
     @accessibility_features = AccessibilityFeature.all
     @venue_categories = VenueCategory.all
@@ -13,11 +16,22 @@ class VenuesController < ApplicationController
   end
 
   def set_markers
+
+    if params[:query].present?
+      sql_query = <<~SQL
+        venues.address ILIKE :query
+        OR venue_categories.category ILIKE :query
+      SQL
+      @venues = Venue.joins(:venue_category).where(sql_query, query: "%#{params[:query]}%")
+    end
+
+    @venues = Venue.all if @venues.empty?
+
     @markers = @venues.map do |venue|
       {
         lat: venue.latitude,
         lng: venue.longitude,
-        info_window: render_to_string(partial: "info_window", locals: { venue: venue }),
+        info_window:   render_to_string(partial: "info_window", locals: { venue: venue }),
         image_url: helpers.asset_url("custom-map-marker.png")
       }
     end
