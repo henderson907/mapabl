@@ -10,9 +10,6 @@ class VenuesController < ApplicationController
       venue_filter(feature.feature) if params["feature#{feature.id}"]
     end
 
-    @venues = Venue.all if @venues.empty?
-
-    # Home search
     if params[:query].present?
       sql_query = <<~SQL
         venues.address ILIKE :query
@@ -20,6 +17,9 @@ class VenuesController < ApplicationController
       SQL
       @venues = Venue.joins(:venue_category).where(sql_query, query: "%#{params[:query]}%")
     end
+
+    @venues = Venue.all if @venues.empty?
+
     @markers = @venues.map do |venue|
       {
         lat: venue.latitude,
