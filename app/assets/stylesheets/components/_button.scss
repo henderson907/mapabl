@@ -26,3 +26,10 @@
   font-size: 14px;
   padding: 5px 5px;
 }
+
+
+.btn-check:checked + .btn, :not(.btn-check) + .btn:active, .btn:first-child:active, .btn.active, .btn.show {
+  color: white;
+  background-color: $blue;
+  border-color: $blue;
+}
