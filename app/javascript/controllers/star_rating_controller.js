@@ -5,7 +5,7 @@ import StarRating from "star-rating.js"
 export default class extends Controller {
   connect() {
    var star =  new StarRating(this.element);
-   star.props = { tooltip: false};
+   star.props = { tooltip: false, clearable: false};
    star.rebuild();
   }
 }
