@@ -16,6 +16,10 @@
   background-color: $blue;
 }
 
+.adept-btn:focus {
+  outline: none;
+}
+
 .large {
   margin: 15px 0 15px 0;
   padding: 15px 5px;
@@ -24,8 +28,10 @@
 
 .medium {
   font-size: 14px;
-  padding: 5px 5px;
+  padding: 5px 12px;
 }
+
+
 
 
 .btn-check:checked + .btn, :not(.btn-check) + .btn:active, .btn:first-child:active, .btn.active, .btn.show {
@@ -35,15 +41,11 @@
 }
 
 .add-venue-btn {
-
-  background-color: $red;
-  border-radius: 15px;
-  color: white;
   position: absolute;
   margin: auto auto;
   left: 50%;
   transform: translateX(-50%);
   bottom: 50px;
-  padding: 15px 30px;
+  text-align: center;
   z-index: 9999;
 }

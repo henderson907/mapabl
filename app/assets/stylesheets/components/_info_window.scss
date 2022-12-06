@@ -1,17 +1,17 @@
 .info-container {
-  display: flex;
   background-color: $white;
   width: 310px;
-  height: 150px;
-  justify-content: center;
   border-radius: 10px;
-  position: absolute;
-  top: 50%;
-  transform: translateX(-50%) translateY(-105%);
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.info-container-left {
+  max-width: 120px;
 }
 
 .info-container-right {
-  position: relative;
   background: linear-gradient(
                               to bottom,
                               white,
@@ -19,6 +19,8 @@
                               rgba(0, 129, 167, 0.1) 40%,
                               rgba(0, 129, 167, 0.1)
                               );
+  padding: 8px 5px;
+  width: 100%;
 
   h5 {
     margin-left: 8px;
@@ -27,14 +29,22 @@
 
   p {
     margin-left: 8px;
+    margin-bottom: 0;
   }
-  overflow: hidden;
 }
 
-.venue-image-wrapper {
-
-  width: 150px;
+.info-container-address {
+  height: 55%;
 }
+
+.info-container-details {
+  height: 45%;
+}
+
+.info-container-details {
+  padding-right: 10px;
+}
+
 
 .venue-image {
   object-fit: cover;
