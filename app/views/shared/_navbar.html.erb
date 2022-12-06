@@ -7,12 +7,6 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0" aria-label="Options">
         <li class="nav-item">
-          <%= link_to (root_path), class: "nav-link d-flex justify-content-between align-items-center" do %>
-            Home
-            <i class="fa-solid fa-arrow-right fa-fw d-lg-none"></i>
-          <% end %>
-        </li>
-        <li class="nav-item">
           <%= link_to (venues_path), class: "nav-link d-flex justify-content-between align-items-center" do %>
             Venues
             <i class="fa-solid fa-arrow-right fa-fw d-lg-none"></i>
@@ -28,8 +22,8 @@
       <ul class="navbar-nav mb-2 mb-lg-0" aria-label="User settings">
         <% if user_signed_in? %>
           <li class="nav-item">
-            <%= link_to user_path(current_user), class: "nav-link" do %>
-              <i class="fa-solid fa-user fa-fw d-lg-none d-inline-block"></i>My profile
+            <%= link_to user_path(current_user), class: "nav-link", aria: { label: "My Profile" } do %>
+              <i class="fa-solid fa-user"></i>
             <% end %>
           </li>
           <li class="nav-item">
