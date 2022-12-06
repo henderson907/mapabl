@@ -29,7 +29,7 @@ export default class extends Controller {
   }
 
   #addMarkersToMap() {
-    this.markersValue.forEach((marker) => {
+    this.markersValue.forEach((marker, i) => {
       const popup = new mapboxgl.Popup().setHTML(marker.info_window)
 
       const customMarker = document.createElement("div")
@@ -38,6 +38,8 @@ export default class extends Controller {
       customMarker.style.backgroundSize = "contain"
       customMarker.style.width = "30px"
       customMarker.style.height = "32px"
+      customMarker.setAttribute('data-action', 'click->map#flyToVenue')
+      customMarker.setAttribute('id', i)
 
       new mapboxgl.Marker(customMarker)
         .setLngLat([marker.lng, marker.lat])
@@ -50,5 +52,13 @@ export default class extends Controller {
     const bounds = new mapboxgl.LngLatBounds()
     this.markersValue.forEach(marker => bounds.extend([ marker.lng, marker.lat ]))
     this.map.fitBounds(bounds, { padding: 70, maxZoom: 15, duration: 0 })
+  }
+
+  flyToVenue(e) {
+    var markers = this.markersValue;
+    var i = e.target.id
+    this.map.flyTo({
+      center: [markers[i].lng, markers[i].lat]
+    })
   }
 }

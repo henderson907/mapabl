@@ -27,3 +27,8 @@
   margin: 3px;
   color: $black;
 }
+
+.map {
+  min-width: 100%;
+  height: calc(100vh - 130px);
+}

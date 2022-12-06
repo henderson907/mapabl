@@ -15,14 +15,17 @@
   background-color: $blue;
 }
 
+.adept-btn:focus {
+  outline: none;
+}
+
 .add-venue-btn {
-  color: white;
   position: absolute;
   margin: auto auto;
   left: 50%;
   transform: translateX(-50%);
   bottom: 50px;
-  padding: 15px 30px;
+  text-align: center;
   z-index: 9999;
 }
 
@@ -34,12 +37,13 @@
 
 .medium {
   font-size: 14px;
-  padding: 5px 5px;
+  padding: 5px 12px;
 }
-
 
 .btn-check:checked + .btn, :not(.btn-check) + .btn:active, .btn:first-child:active, .btn.active, .btn.show {
   color: white;
   background-color: $blue;
   border-color: $blue;
 }
+
+
