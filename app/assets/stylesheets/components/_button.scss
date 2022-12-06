@@ -15,6 +15,17 @@
   background-color: $blue;
 }
 
+.add-venue-btn {
+  color: white;
+  position: absolute;
+  margin: auto auto;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 50px;
+  padding: 15px 30px;
+  z-index: 9999;
+}
+
 .large {
   margin: 15px 0 15px 0;
   padding: 15px 5px;
@@ -31,17 +42,4 @@
   color: white;
   background-color: $blue;
   border-color: $blue;
-}
-
-.add-venue-btn {
-  background-color: $red;
-  border-radius: 6px;
-  color: white;
-  position: absolute;
-  margin: auto auto;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 50px;
-  padding: 15px 30px;
-  z-index: 9999;
 }
