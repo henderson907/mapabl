@@ -1,18 +1,26 @@
 <% content_for :meta_title, "Adept | Write a review for #{@venue.name}!" %>
 <div class="container py-5 px-4">
-  <div class="d-flex justify-content-between align-items-center">
+  <div class="d-flex justify-content-between text-center align-items-center">
       <%= link_to :back do %>
-        <i class="fa-solid fa-fw fa-arrow-left"></i> Back
+        <i class="fa-solid fa-fw fa-arrow-left"></i>
       <% end %>
-    <h2><%= @venue.name %></h2>
-    <div></div>
+    <h3><%= @venue.name %></h3>
+    <span style="visibility: hidden;"><i class="fa-solid fa-fw fa-arrow-left"></i></span>
   </div>
-  <div class="py-3">
-    <%= simple_form_for [@venue, @review] do |f| %>
-      <%= f.input :content, as: :text %>
-      <%= f.input :rating, collection: 1..5, selected: 5 %>
-      <%= f.input :photos, as: :file %>
-      <%= f.submit "Submit review", class: "btn adept-btn text-center" %>
+  <div>
+    <%= simple_form_for [@venue, @review], html: { class: "adept-form" } do |f| %>
+      <div class="adept-input-group adept-rating">
+        <%= f.input :rating, collection: 1..5, selected: 5, input_html: {data: {controller: "star-rating"}}, label: false %>
+      </div>
+      <div class="adept-input-group">
+        <%= f.input :content, as: :text, placeholder: 'Share what you think about this place!', label: false %>
+      </div>
+      <div class="adept-input-group">
+        <%= f.input :photos, as: :file, input_html: {class: 'adept-file-upload'}, label: false %>
+      </div>
+      <div class="adept-submit">
+        <%= f.submit "Publish", class: "adept-btn large" %>
+      </div>
     <% end %>
   </div>
 </div>
