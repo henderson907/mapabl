@@ -7,7 +7,6 @@
   font-size: 18px;
   letter-spacing: 1px;
   text-decoration: none;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   transition: color .3s, background-color .3s;
 }
 
@@ -18,6 +17,16 @@
 
 .adept-btn:focus {
   outline: none;
+}
+
+.add-venue-btn {
+  position: absolute;
+  margin: auto auto;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 50px;
+  text-align: center;
+  z-index: 9999;
 }
 
 .large {
@@ -31,21 +40,10 @@
   padding: 5px 12px;
 }
 
-
-
-
 .btn-check:checked + .btn, :not(.btn-check) + .btn:active, .btn:first-child:active, .btn.active, .btn.show {
   color: white;
   background-color: $blue;
   border-color: $blue;
 }
 
-.add-venue-btn {
-  position: absolute;
-  margin: auto auto;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 50px;
-  text-align: center;
-  z-index: 9999;
-}
+
