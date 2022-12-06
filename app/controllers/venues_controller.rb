@@ -90,12 +90,23 @@ class VenuesController < ApplicationController
   def create
     @venue = Venue.new(venue_params)
     @venue.save
+
+    parameters = params[:venue]
+    features = parameters[:accessibility_feature_ids]
+    features.delete_at(0)
+
+    features.each do |feature|
+      @new_feature = VenueFeature.new(venue: @venue)
+      @new_feature.accessibility_feature = AccessibilityFeature.find_by(id: feature.to_i)
+      @new_feature.save
+    end
+
     redirect_to venue_path(@venue)
   end
 
   private
 
   def venue_params
-    params.require(:venue).permit(:address, :name, :venue_category_id, :venue_features, :photos)
+    params.require(:venue).permit(:address, :name, :venue_category_id, :photos, :accessibility_feature_ids)
   end
 end
