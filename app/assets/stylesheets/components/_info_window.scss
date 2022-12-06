@@ -19,13 +19,6 @@
                               rgba(0, 129, 167, 0.1) 40%,
                               rgba(0, 129, 167, 0.1)
                               );
-    width: 300px;
-
-  .info-cont-link {
-    position: absolute;
-    right: 10px;
-    bottom: 10px;
-  }
 
   h5 {
     margin-left: 8px;
@@ -35,6 +28,12 @@
   p {
     margin-left: 8px;
   }
+  overflow: hidden;
+}
+
+.venue-image-wrapper {
+
+  width: 150px;
 }
 
 .venue-image {
