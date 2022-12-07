@@ -32,3 +32,9 @@
   min-width: 100%;
   height: calc(100vh - 130px);
 }
+
+.mapboxgl-ctrl-top-right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

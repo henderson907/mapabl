@@ -14,18 +14,39 @@ export default class extends Controller {
       container: this.element,
       style: "mapbox://styles/mapbox/streets-v10"
     })
-    this.#addMarkersToMap()
-    this.#addMarkersToMap()
-    this.#fitMapToMarkers()
-
-    this.#addMarkersToMap()
-    this.#fitMapToMarkers()
 
     this.map.addControl(new MapboxGeocoder({
       accessToken: mapboxgl.accessToken,
       mapboxgl: mapboxgl,
-      center: [0,0]
+      zoom: 15
     }))
+
+    this.map.addControl(
+      new mapboxgl.GeolocateControl({
+        positionOptions: {
+          enableHighAccuracy: true,
+          },
+        trackUserLocation: true,
+        showAccuracyCircle: false
+        })
+      );
+
+
+    this.#addMarkersToMap()
+    this.#fitMapToMarkers()
+    this.defaultPosition()
+  }
+
+  defaultPosition() {
+    this.map.on('load', function() {
+      if(navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(position => {
+          this.flyTo({center: [position.coords.longitude, position.coords.latitude], duration: 500})
+        })
+      } else {
+        this.flyTo({center: [0, 0]})
+      }
+    })
   }
 
   #addMarkersToMap() {
