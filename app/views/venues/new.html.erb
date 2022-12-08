@@ -1,20 +1,31 @@
 <% content_for :meta_title, "Adept | New venue" %>
 <div class="container py-5 px-4">
   <div class="d-flex justify-content-between align-items-center">
-      <%= link_to :back do %>
-        <i class="fa-solid fa-fw fa-arrow-left"></i> Back
+      <%= link_to venues_path do %>
+        <i class="fa-solid fa-fw fa-arrow-left"></i>
       <% end %>
-    <h2>New venue</h2>
-    <div></div>
+    <h3>New venue</h3>
+    <span style="visibility: hidden;"><i class="fa-solid fa-fw fa-arrow-left"></i></span>
   </div>
-  <div class="py-3">
-    <%= simple_form_for [@venue] do |f| %>
-      <%= f.input :photos, as: :file, required: false, autofocus: true %>
-      <%= f.input :name %>
-      <%= f.input :address %>
-      <%= f.association :venue_category, label_method: :category, value_method: :id, selected: :first, include_blank: false %>
-      <%= f.association :accessibility_features, label_method: :feature, value_method: :id, as: :check_boxes, include_blank: false %>
-      <%= f.submit "Create venue", class: "btn adept-btn text-center" %>
+  <div class="py-2">
+    <%= simple_form_for [@venue], data: { controller: 'venue' }, class: 'adept-form' do |f| %>
+      <div class="d-flex justify-content-center py-2">
+        <%= f.label :photos, label: "<i class='fa-solid fa-camera'></i>".html_safe, class: 'upload-avatar',  data: { venue_target: 'upload' } %>
+        <%= f.input :photos, as: :file, required: false, autofocus: true, input_html: { hidden: true, data: { action: 'change->venue#upload' } }, label: false %>
+      </div>
+      <div class="adept-input-group">
+        <%= f.input :name %>
+      </div>
+      <div class="adept-input-group">
+        <%= f.input :address %>
+      </div>
+      <div class="adept-input-group">
+        <%= f.association :venue_category, label_method: :category, value_method: :id, selected: :first, include_blank: false %>
+        <%= f.association :accessibility_features, label_method: :feature, value_method: :id, as: :check_boxes, include_blank: false %>
+      </div>
+      <div class="adept-submit">
+        <%= f.submit "Create venue", class: "btn adept-btn text-center" %>
+      </div>
     <% end %>
   </div>
 </div>

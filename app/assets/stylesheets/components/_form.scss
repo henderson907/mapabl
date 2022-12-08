@@ -64,3 +64,21 @@
   font-weight: 700;
   text-align: center;
 }
+
+.upload-avatar {
+  align-items: center;
+  background-color: $yellow;
+  border-radius: 100%;
+  color: rgb(49, 49, 49);
+  cursor: pointer;
+  font-size: 45px;
+  display: flex;
+  justify-content: center;
+  height: 150px;
+  width: 150px;
+  transition: opacity .2s;
+}
+
+.upload-avatar:hover{
+  opacity: .7;
+}
