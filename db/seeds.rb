@@ -52,70 +52,70 @@ puts "Finished seeding User (3/6)..."
 
 # VENUES
 file = URI.open("https://s.marketwatch.com/public/resources/MWimages/MW-FM649_lidl_s_ZG_20170517111905.jpg")
-new_venue = Venue.new(name: "Lidl", address: "Leipziger Str. 42, 10117 Berlin, Germany")
+new_venue = Venue.new(name: "Lidl", address: "Leipziger Str. 42, 10117, Berlin")
 new_venue.venue_category = VenueCategory.find_by(category: "Supermarket")
 new_venue.photos.attach(io: file, filename: "lidl.jpg", content_type: "image/jpg")
 new_venue.save
 file.close
 
 file = URI.open("https://media-cdn.tripadvisor.com/media/photo-s/0c/c0/5b/21/open-kitchen-to-watch.jpg")
-new_venue = Venue.new(name: "Asia Gondel", address: "Brückenstraße. 1B, 10179 Berlin Germany")
+new_venue = Venue.new(name: "Asia Gondel", address: "Brückenstraße. 1B, 10179, Berlin")
 new_venue.venue_category = VenueCategory.find_by(category: "Restaurant")
 new_venue.save
 new_venue.photos.attach(io: file, filename: "asia-gondel.jpg", content_type: "image/jpg")
 file.close
 
-file = URI.open("https://www.hallo-helmstedt.de/einkaufenhe/image/schaefers.jpg")
-new_venue = Venue.new(name: "Schäfer's", address: "Wallstraße 14, 10179 Berlin, Germany")
+file = URI.open("https://www.visitpoulsbo.com/wp-content/uploads/2019/04/2019_04_10-Visit_Pbo_Sluys-00020.jpg")
+new_venue = Venue.new(name: "Schäfer's", address: "Wallstraße 14, 10179, Berlin")
 new_venue.venue_category = VenueCategory.find_by(category: "Bakery")
 new_venue.save
 new_venue.photos.attach(io: file, filename: "schaefers.jpg", content_type: "image/jpg")
 file.close
 
 file = URI.open("https://1.bp.blogspot.com/-rLDlR08j1Hc/U52wCK0kexI/AAAAAAAAJOM/GIggQda22Ag/s1600/Museums+Pergamon+Berlin+P1010523.JPG")
-new_venue = Venue.new(name: "Pergamonmuseum", address: "Bodestraße 1-3, 10178 Berlin, Germany")
+new_venue = Venue.new(name: "Pergamonmuseum", address: "Bodestraße 1-3, 10178, Berlin")
 new_venue.venue_category = VenueCategory.find_by(category: "Museum")
 new_venue.photos.attach(io: file, filename: "pergamon.jpg", content_type: "image/jpg")
 new_venue.save
 file.close
 
-file = URI.open("https://www.fiylo.de/crm/Berlin/CineStar-Berlin-Cubix/Events/cinestar-berlin-cubix-events-11.jpg")
-new_venue = Venue.new(name: "CineStar CUBIX", address: "Rathausstraße 1, 10178 Berlin, Germany")
+file = URI.open("https://egyptianstreets.com/wp-content/uploads/2018/01/3-8.jpg")
+new_venue = Venue.new(name: "CineStar CUBIX", address: "Rathausstraße 1, 10178, Berlin")
 new_venue.venue_category = VenueCategory.find_by(category: "Cinema")
 new_venue.photos.attach(io: file, filename: "cinestar-cubix.jpg", content_type: "image/jpg")
 new_venue.save
 file.close
 
 file = URI.open("https://blickgewinkelt.de/wp-content/uploads/2018/09/Dussmann-Berlin-6.jpg")
-new_venue = Venue.new(name: "Dussman das KulturKaufhaus", address: "Friedrichstraße 90, 10117 Berlin, Germany")
+new_venue = Venue.new(name: "Dussman das KulturKaufhaus", address: "Friedrichstraße 90, 10117, Berlin")
 new_venue.venue_category = VenueCategory.find_by(category: "Shop")
 new_venue.photos.attach(io: file, filename: "dussman.jpg", content_type: "image/jpg")
 new_venue.save
 file.close
 
 file = URI.open("https://www.tubefilter.com/wp-content/uploads/2021/02/mr-beast-burger-one-million-1400x825.jpg")
-new_venue = Venue.new(name: "Mr Imbiss BURGER", address: "Schützenstraße 2, 10117 Berlin, Germany")
+new_venue = Venue.new(name: "Mr Imbiss BURGER", address: "Schützenstraße 2, 10117, Berlin")
 new_venue.venue_category = VenueCategory.find_by(category: "Other")
 new_venue.photos.attach(io: file, filename: "mrimbissburger.jpg", content_type: "image/jpg")
 new_venue.save
 file.close
 
 file = URI.open("https://media.blogto.com/articles/future-bakery-toronto-2.jpg?w=2048&cmd=resize_then_crop&height=1365&quality=70")
-new_venue = Venue.new(name: "Bäcker Wiedemann", address: "Karl-Liebknecht-STr. 5, 10178 Berlin, Germany")
+new_venue = Venue.new(name: "Bäcker Wiedemann", address: "Karl-Liebknecht-Str. 5, 10178, Berlin")
 new_venue.venue_category = VenueCategory.find_by(category: "Bakery")
 new_venue.photos.attach(io: file, filename: "bakery.jpg", content_type: "image/jpg")
 new_venue.save
 file.close
 
 file = URI.open("https://www.gourmet-blog.de/wp-content/uploads/2016/04/Colette-Tim-Raue-Berlin_1.jpeg")
-new_venue = Venue.new(name: "Charlotte 1", address: "Charlottenstraße 1, 10969 Berlin, Germany")
+new_venue = Venue.new(name: "Charlotte 1", address: "Charlottenstraße 1, 10969, Berlin")
 new_venue.venue_category = VenueCategory.find_by(category: "Restaurant")
 new_venue.photos.attach(io: file, filename: "charlotte1.jpg", content_type: "image/jpg")
 new_venue.save
 file.close
 
 file = URI.open("https://burger-meister.de/wp-content/uploads/2021/04/Burgermeister-Closeup.jpg")
-new_venue = Venue.new(name: "Burgermeister Alexanderplatz", address: "Dircksenstraße 113, 10178 Berlin")
+new_venue = Venue.new(name: "Burgermeister Alexanderplatz", address: "Dircksenstraße 113, 10178, Berlin")
 new_venue.venue_category = VenueCategory.find_by(category: "Restaurant")
 new_venue.photos.attach(io: file, filename: "burgermeister.jpg", content_type: "image/jpg")
 new_venue.save
