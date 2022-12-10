@@ -9,14 +9,15 @@
   </div>
   <div>
     <%= simple_form_for [@venue, @review], html: { class: "adept-form" } do |f| %>
+      <div class="d-flex justify-content-center py-2">
+        <%= f.label :photos, label: "<i class='fa-solid fa-camera'></i>".html_safe, class: 'upload-avatar' %>
+         <%= f.input :photos, as: :file, input_html: { hidden: true }, label: false %>
+      </div>
       <div class="adept-input-group adept-rating">
         <%= f.input :rating, collection: 1..5, selected: 5, input_html: {data: {controller: "star-rating"}}, label: false %>
       </div>
       <div class="adept-input-group">
         <%= f.input :content, as: :text, placeholder: 'Share what you think about this place!', label: false %>
-      </div>
-      <div class="adept-input-group">
-        <%= f.input :photos, as: :file, input_html: {class: 'adept-file-upload'}, label: false %>
       </div>
       <div class="adept-submit">
         <%= f.submit "Publish", class: "adept-btn large" %>
