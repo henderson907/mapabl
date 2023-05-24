@@ -32,32 +32,7 @@
         <h3>Review and share!</h3>
         <p>Did a place go above and beyond to accomodate access needs? Leave them a review to let other users know!</p>
         <%= image_tag('star.png', alt: "An image of a star. Rate you favourite places!") %>
-        <%= link_to "Review place", nil, class: "adept-btn large" %>
-    </div>
-  </div>
-</div>
-<!-- What others say -->
-<div class="container-fluid" style="background-color: rgba(0, 129, 167, .1);">
-  <div class="row">
-    <div class="what-others-say col-offset-md-12 text-center">
-      <h3>What do others think?</h3>
-      <div class="comment">
-        <%= link_to ("https://www.tagesspiegel.de/") do %>
-          <%= image_tag('tagesspiegel_logo.png', width: 250, alt: "Tagesspiegel logo") %>
-        <% end %>
-        <p>Ein hervorragendes Beispiel dafür, was erreicht werden kann, wenn Einzelpersonen
-        beschließen, die Dinge selbst in die Hand zu nehmen und wichtige Fragen anzugehen.</p>
-        <p><strong>Translation:</strong> An excellent example of what can be achieved when individuals decide
-        to take matters into their own hands and tackle important issues.</p>
-        <small>Leon Müller - Chief Editor</small>
-      </div>
-      <div class="comment">
-        <%= link_to ("https://www.telegraph.co.uk/") do %>
-          <%= image_tag('telegraph_logo.png', width: 250, alt: "The Telegraph logo") %>
-        <% end %>
-        <p>A brilliantly simple idea and thoroughly well executed, no wonder Enabl is such a success.</p>
-        <small>Charlotte Smith - Senior Reporter</small>
-      </div>
+        <%= link_to "Review place", venues_path, class: "adept-btn large" %>
     </div>
   </div>
 </div>
