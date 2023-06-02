@@ -1,5 +1,5 @@
-
 require "open-uri"
+
 # Cleaning the database of previous entries
 puts "Clearing your database..."
 Review.destroy_all
@@ -267,11 +267,10 @@ new_review.user = User.all[1]
 new_review.save
 
 new_review = Review.new(content: "We had Audio Guides and staff support during the whole visit. I'll definitely come back!",
-  rating: 5)
+                        rating: 5)
 new_review.venue = Venue.find_by(name: "Pergamonmuseum")
 new_review.user = User.all[2]
 new_review.save
-
 
 new_review = Review.new(content: "They do special screenings where they turn the volume down! It's great!",
                         rating: 5)
