@@ -80,18 +80,11 @@ VenueCategory.create(category: "Shopping", venue_type: "Salon")
 VenueCategory.create(category: "Shopping", venue_type: "Hair Dresser")
 VenueCategory.create(category: "Shopping", venue_type: "Garden Centre")
 
-
 puts "Finished seeding VenueCategory (2/6)..."
 
 # USERS
-User.create(first_name: "Carson", last_name: "O'Gin",
-            email: "testUser1@test.com", password: "123456")
-
-User.create(first_name: "Shirley", last_name: "Knot",
-            email: "testUser2@test.com", password: "123456")
-
-User.create(first_name: "Lee", last_name: "Murr",
-            email: "testUser3@test.com", password: "123456")
+User.create(first_name: "Freddy", last_name: "Henderson",
+            email: "freddy.enabl@gmail.com", password: "Enab1")
 
 puts "Finished seeding User (3/6)..."
 
