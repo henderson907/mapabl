@@ -1,7 +1,12 @@
+.tag-line {
+  text-align: center;
+  padding: 20px;
+}
+
 // BANNER
 .banner {
   background-attachment:scroll;
-  background-image: linear-gradient(rgba(0, 0, 0, .5) 60%, rgba(255, 255, 255, .1) 85%), url('elevate.jpg');
+  background-image: url('world_map.png');
   background-position: 50% 0%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -9,9 +14,13 @@
   position: relative;
 }
 
-.banner h2 {
-  color: $white;
+.search-bar-total {
+  border: 1px solid black;
+  border-radius: 30px;
+}
 
+.search-bar {
+  background-color: white;
 }
 
 .intro {
@@ -35,9 +44,10 @@
 
 .intro form input {
   border: none;
-  border-radius: 6px;
+  border-radius: 30px;
   font-size: 15px;
   padding: 15px 15px;
+  border-right: 1px solid black;
 }
 
 .intro form input::placeholder {
@@ -47,8 +57,7 @@
 @media (min-width: 1024px) {
 
   .banner {
-    background-image: linear-gradient(rgba(0, 0, 0, .5) 60%, rgba(255, 255, 255, .1) 85%), url('elevate-small.jpg');
-
+    background-image: url('world_map.png');
   }
 
   .banner h2 {

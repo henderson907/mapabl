@@ -1,20 +1,29 @@
-<nav class="navbar navbar-expand-lg navbar-adept">
+<nav class="navbar navbar-expand-lg navbar-enabl">
   <div class="container-fluid">
-    <%= link_to(raw("<h1>Enabl</h1>"), root_path, class: "navbar-brand", aria: { label: "Enabl logo. Returns to home" }) %>
+    <%= link_to(image_tag("enabl-master-image.png", class:"enabl-logo"), root_path, class: "navbar-logo", aria: { label: "Enabl logo. Returns to home" }) %>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <i class="fas fa-fw fa-bars"></i>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0" aria-label="Options">
+        <%# Map %>
         <li class="nav-item">
           <%= link_to (venues_path), class: "nav-link d-flex justify-content-between align-items-center" do %>
-            Venues
+            <i class="fa-regular fa-map" style="color: #000000;"></i>Map
             <i class="fa-solid fa-arrow-right fa-fw d-lg-none"></i>
           <% end %>
         </li>
+        <%# Featured %>
+        <li class="nav-item">
+          <%= link_to (featured_path), class: "nav-link d-flex justify-content-between align-items-center" do %>
+            <i class="fa-regular fa-lightbulb" style="color: #000000;"></i>Featured
+            <i class="fa-solid fa-arrow-right fa-fw d-lg-none"></i>
+          <% end %>
+        </li>
+        <%# About %>
         <li class="nav-item line-separator">
           <%= link_to (about_path), class: "nav-link d-flex justify-content-between align-items-center" do %>
-            About Us
+            <i class="fa-solid fa-info" style="color: #000000;"></i>About
             <i class="fa-solid fa-arrow-right fa-fw d-lg-none"></i>
           <% end %>
         </li>
