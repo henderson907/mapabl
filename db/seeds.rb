@@ -2,10 +2,10 @@ require "open-uri"
 
 # Cleaning the database of previous entries
 puts "Clearing your database..."
-# SavedVenue.destroy_all
-# Review.destroy_all
-# VenueFeature.destroy_all
-# Venue.destroy_all
+SavedVenue.destroy_all
+Review.destroy_all
+VenueFeature.destroy_all
+Venue.destroy_all
 User.destroy_all
 VenueCategory.destroy_all
 AccessibilityFeature.destroy_all
