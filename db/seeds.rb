@@ -14,17 +14,32 @@ AccessibilityFeature.destroy_all
 puts "Seeding your database..."
 
 # ACCESSIBILITY FEATURES
-AccessibilityFeature.create(feature: "Step-free Access")
-AccessibilityFeature.create(feature: "Accessible Bathroom")
-AccessibilityFeature.create(feature: "Braille Information")
-AccessibilityFeature.create(feature: "Hearing Induction Loops")
-AccessibilityFeature.create(feature: "Quiet Atmosphere")
-AccessibilityFeature.create(feature: "No Flashing Lights")
-AccessibilityFeature.create(feature: "Automatic Doors")
-AccessibilityFeature.create(feature: "Chairs with Back Support")
-AccessibilityFeature.create(feature: "Biohazard Waste Bin in Bathroom")
-AccessibilityFeature.create(feature: "Large Print Information")
-AccessibilityFeature.create(feature: "Sign Language Interpretation")
+AccessibilityFeature.create(category: "Visual Impairment", feature: "Large Print Information")
+AccessibilityFeature.create(category: "Visual Impairment", feature: "Braille Information")
+AccessibilityFeature.create(category: "Visual Impairment", feature: "Visual Fire Alarm")
+AccessibilityFeature.create(category: "Visual Impairment", feature: "Verbal Information / Instructions")
+AccessibilityFeature.create(category: "Audio Impairment", feature: "Hearing Induction Loop")
+AccessibilityFeature.create(category: "Audio Impairment", feature: "Sign Language Interpretation")
+AccessibilityFeature.create(category: "Audio Impairment", feature: "Written Information / Instructions")
+AccessibilityFeature.create(category: "Mobility Impairment", feature: "Step Free Access")
+AccessibilityFeature.create(category: "Mobility Impairment", feature: "Flat, Solid Flooring")
+AccessibilityFeature.create(category: "Mobility Impairment", feature: "Adequate Space For Moving")
+AccessibilityFeature.create(category: "Sensory Impairment", feature: "No Flashing Lights")
+AccessibilityFeature.create(category: "Sensory Impairment", feature: "Quiet Atmosphere")
+AccessibilityFeature.create(category: "Sensory Impairment", feature: "Adjustable Temperature")
+AccessibilityFeature.create(category: "Sensory Impairment", feature: "Quiet Room")
+AccessibilityFeature.create(category: "Sensory Impairment", feature: "Sensory Room")
+AccessibilityFeature.create(category: "Physical Impairment", feature: "Chairs with Back Support")
+AccessibilityFeature.create(category: "Physical Impairment", feature: "Automatic Doors")
+AccessibilityFeature.create(category: "Physical Impairment", feature: "Items within Easy Reach")
+AccessibilityFeature.create(category: "Hygiene Requirements", feature: "Biohazard Waste Bin")
+AccessibilityFeature.create(category: "Hygiene Requirements", feature: "Adult Changing Facilities")
+AccessibilityFeature.create(category: "Hygiene Requirements", feature: "Accessible Toilet")
+AccessibilityFeature.create(category: "Miscellaneous", feature: "Accessible Parking")
+AccessibilityFeature.create(category: "Miscellaneous", feature: "Easy Entrance")
+AccessibilityFeature.create(category: "Miscellaneous", feature: "Dietary Requirement Catering")
+AccessibilityFeature.create(category: "Miscellaneous", feature: "Accessible Smoking Area")
+
 
 puts "Finished seeding AccessibilityFeature (1/6)..."
 
