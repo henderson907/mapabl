@@ -1,9 +1,13 @@
-.navbar-adept {
-  background-color: $blue;
+.navbar-enabl {
+  background-color: $yellow;
 }
 
-.navbar-adept a {
-  color: $white;
+.enabl-logo {
+max-width: 250px;
+}
+
+.navbar-enabl a {
+  color: black;
 }
 
 .navbar-toggler {
@@ -19,7 +23,7 @@
   padding-right: 32px;
 }
 
-@media(max-width: 1023px) {
+@media(max-width: 100px) {
 
   .line-separator {
     padding-bottom: .5rem;
