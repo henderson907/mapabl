@@ -2,7 +2,7 @@ require "open-uri"
 
 # Cleaning the database of previous entries
 puts "Clearing your database..."
-# SavedVenue.destroy_all
+SavedVenue.destroy_all
 Review.destroy_all
 VenueFeature.destroy_all
 Venue.destroy_all
@@ -305,5 +305,7 @@ new_review = Review.new(content: "One of the women working there showed me all t
 new_review.venue = Venue.find_by(name: "Dussman das KulturKaufhaus")
 new_review.user = User.all[3]
 new_review.save
+
+# saved_venue
 
 puts "Finished! (6/6)"
