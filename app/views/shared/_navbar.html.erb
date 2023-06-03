@@ -6,15 +6,24 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0" aria-label="Options">
+        <%# Map %>
         <li class="nav-item">
           <%= link_to (venues_path), class: "nav-link d-flex justify-content-between align-items-center" do %>
-            Venues
+            <i class="fa-regular fa-map" style="color: #000000;"></i>Map
             <i class="fa-solid fa-arrow-right fa-fw d-lg-none"></i>
           <% end %>
         </li>
+        <%# Featured %>
+        <li class="nav-item">
+          <%= link_to (featured_path), class: "nav-link d-flex justify-content-between align-items-center" do %>
+            <i class="fa-regular fa-lightbulb" style="color: #000000;"></i>Featured
+            <i class="fa-solid fa-arrow-right fa-fw d-lg-none"></i>
+          <% end %>
+        </li>
+        <%# About %>
         <li class="nav-item line-separator">
           <%= link_to (about_path), class: "nav-link d-flex justify-content-between align-items-center" do %>
-            About Us
+            <i class="fa-solid fa-info" style="color: #000000;"></i>About
             <i class="fa-solid fa-arrow-right fa-fw d-lg-none"></i>
           <% end %>
         </li>

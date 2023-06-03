@@ -15,12 +15,17 @@ max-width: 250px;
 }
 
 .navbar-toggler i {
-  color: $white;
+  color: black;
   font-size: 28px;
 }
 
-.nav-item i {
-  padding-right: 32px;
+.nav-item {
+  padding-left: 50px;
+  font-size: 25px;
+
+  i {
+    padding-right: 15px;
+  }
 }
 
 @media(max-width: 100px) {
