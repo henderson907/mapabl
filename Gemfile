@@ -51,7 +51,11 @@ gem "sassc-rails"
 
 gem "devise"
 gem "autoprefixer-rails"
-gem "font-awesome-sass", "~> 6.1"
+
+source "https://token:E9A325F6-08C8-420C-B1C8-396AAD3BF4E5@dl.fontawesome.com/basic/fontawesome-pro/ruby/" do
+  gem "font-awesome-pro-sass", "6.4.0"
+end
+
 gem "simple_form", github: "heartcombo/simple_form"
 gem 'rails_real_favicon'
 group :development, :test do

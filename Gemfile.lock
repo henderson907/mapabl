@@ -117,8 +117,6 @@ GEM
     erubi (1.11.0)
     execjs (2.8.1)
     ffi (1.15.5)
-    font-awesome-sass (6.2.0)
-      sassc (~> 2.0)
     geocoder (1.8.1)
     globalid (1.0.0)
       activesupport (>= 5.0)
@@ -273,6 +271,12 @@ GEM
       nokogiri (~> 1.8)
     zeitwerk (2.6.6)
 
+GEM
+  remote: https://token:E9A325F6-08C8-420C-B1C8-396AAD3BF4E5@dl.fontawesome.com/basic/fontawesome-pro/ruby/
+  specs:
+    font-awesome-pro-sass (6.4.0)
+      sassc (~> 2.0)
+
 PLATFORMS
   x86_64-darwin-20
   x86_64-linux
@@ -285,7 +289,7 @@ DEPENDENCIES
   debug
   devise
   dotenv-rails
-  font-awesome-sass (~> 6.1)
+  font-awesome-pro-sass (= 6.4.0)!
   geocoder
   jbuilder
   jsbundling-rails
