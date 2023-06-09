@@ -5,8 +5,7 @@
 
 // External libraries
 @import "bootstrap/scss/bootstrap";
-@import "font-awesome";
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import "font-awesome-pro";
 @import "@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder";
 @import "star-rating.js/dist/star-rating.css";
 
@@ -14,6 +13,14 @@
 @import "components/index";
 @import "pages/index";
 
+// Font Awesome Styles
+@import "font-awesome-pro/brands";
+@import "font-awesome-pro/solid";
+@import "font-awesome-pro/regular";
+@import "font-awesome-pro/light";
+@import "font-awesome-pro/thin";
+@import "font-awesome-pro/duotone";
+@import "font-awesome-pro/sharp-solid";
 
 body {
   background-color: $off-white;
