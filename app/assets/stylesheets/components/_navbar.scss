@@ -20,6 +20,10 @@ padding: 10px;
   font-size: 28px;
 }
 
+.nav-el {
+  flex-grow: 0 !important;
+}
+
 .nav-item {
   padding-left: 50px;
   font-size: 25px;

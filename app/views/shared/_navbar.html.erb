@@ -1,11 +1,14 @@
 <nav class="navbar navbar-expand-lg navbar-enabl">
   <div class="container-fluid">
-    <%= link_to(image_tag("enabl-master-image.png", class:"enabl-logo"), root_path, class: "navbar-logo", aria: { label: "Enabl logo. Returns to home" }) %>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <i class="fas fa-fw fa-bars"></i>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="nav-el">
+      <%= link_to(image_tag("enabl-master-image.png", class:"enabl-logo"), root_path, class: "navbar-logo", aria: { label: "Enabl logo. Returns to home" }) %>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-fw fa-bars"></i>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse nav-el" id="navbarNavAltMarkup">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0" aria-label="Options">
+
         <%# Map %>
         <li class="nav-item">
           <%= link_to (venues_path), class: "nav-link d-flex justify-content-between align-items-center" do %>
@@ -13,6 +16,7 @@
             <i class="fa-solid fa-arrow-right fa-fw d-lg-none"></i>
           <% end %>
         </li>
+
         <%# Featured %>
         <li class="nav-item">
           <%= link_to (featured_path), class: "nav-link d-flex justify-content-between align-items-center" do %>
@@ -20,6 +24,7 @@
             <i class="fa-solid fa-arrow-right fa-fw d-lg-none"></i>
           <% end %>
         </li>
+
         <%# About %>
         <li class="nav-item">
           <%= link_to (about_path), class: "nav-link d-flex justify-content-between align-items-center" do %>
@@ -27,30 +32,32 @@
             <i class="fa-solid fa-arrow-right fa-fw d-lg-none"></i>
           <% end %>
         </li>
+
         <%# User %>
         <li class="dropdown nav-item">
           <button class="btn btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <i class="fa-light fa-user fa-xl" style="color: #000000;"></i>
+              <%#= image_tag(current_user.photo) %>
+              <i class="fa-light fa-user fa-xl" style="color: #000000;"></i>
           </button>
           <ul class="dropdown-menu">
             <% if user_signed_in? %>
-              <li class="nav-item">
+              <li class="user_option">
                 <%= link_to user_path(current_user), class: "nav-link" do %>
                   <i class="fa-solid fa-user fa-fw d-lg-none d-inline-block"></i>My profile
                 <% end %>
               </li>
-              <li class="nav-item">
+              <li class="user_option">
                 <%= link_to (destroy_user_session_path), class: "nav-link", data: { turbo_method: :delete } do %>
                   <i class="fa-solid fa-sign-out fa-fw d-lg-none d-inline-block"></i>Logout
                 <% end %>
               </li>
             <% else %>
-              <li class="nav-item">
+              <li class="user_option">
                 <%= link_to (new_user_session_path), class: "nav-link" do %>
                   <i class="fa-solid fa-sign-in fa-fw d-lg-none d-inline-block"></i>Login
                 <% end %>
               </li>
-              <li class="nav-item">
+              <li class="user_option">
                 <%= link_to (new_user_registration_path), class: "nav-link" do %>
                   <i class="fa-solid fa-user-plus fa-fw d-lg-none d-inline-block"></i>Sign up
                 <% end %>
@@ -58,6 +65,7 @@
             <% end %>
           </ul>
         </li>
+
       </ul>
     </div>
   </div>
