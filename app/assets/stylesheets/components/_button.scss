@@ -7,7 +7,33 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  &:hover {
+    background-color: $yellow;
+    color: black;
+    filter: drop-shadow(0 0 4px grey);
+  }
 }
+
+.enabl-btn-purple {
+  background-color: $purple;
+  border-radius: 30px;
+  border: none;
+  color: white;
+  min-width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    background-color: $purple;
+    color: white;
+    filter: drop-shadow(0 0 4px grey);
+  }
+}
+
+
+
 
 .adept-btn {
   background-color: $red;
