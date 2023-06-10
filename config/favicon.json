@@ -1,10 +1,8 @@
 {
-  "master_picture": "app/assets/images/adept-favicon-master-file.png",
+  "master_picture": "app/assets/images/enabl-favicon-master-file.png",
   "favicon_design": {
       "ios": {
-          "picture_aspect": "background_and_margin",
-          "background_color": "#0081a7",
-          "margin": "18%",
+          "picture_aspect": "no_change",
           "assets": {
               "ios6_and_prior_icons": false,
               "ios7_and_later_icons": false,
@@ -13,14 +11,11 @@
           }
       },
       "desktop_browser": {
-          "design": "background",
-          "backgroundColor": "#0081a7",
-          "backgroundRadius": 0.5,
-          "imageScale": 0.8
+          "design": "raw"
       },
       "windows": {
           "picture_aspect": "no_change",
-          "background_color": "#0081a7",
+          "background_color": "#da532c",
           "on_conflict": "override",
           "assets": {
               "windows_80_ie_10_tile": false,
@@ -33,12 +28,9 @@
           }
       },
       "android_chrome": {
-          "picture_aspect": "background_and_margin",
-          "margin": "17%",
-          "background_color": "#0081a7",
-          "theme_color": "#0081a7",
+          "picture_aspect": "no_change",
+          "theme_color": "#ffffff",
           "manifest": {
-              "name": "Adept",
               "display": "standalone",
               "orientation": "not_set",
               "on_conflict": "override",
@@ -48,10 +40,6 @@
               "legacy_icon": false,
               "low_resolution_icons": false
           }
-      },
-      "safari_pinned_tab": {
-          "picture_aspect": "silhouette",
-          "theme_color": "#0081a7"
       }
   },
   "settings": {
