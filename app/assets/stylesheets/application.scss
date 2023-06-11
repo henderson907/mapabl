@@ -31,14 +31,40 @@ a {
   text-decoration: none;
  }
 
+.column-container {
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.column-item {
+  padding: 20px;
+  flex-grow: auto;
+  align-self: center;
+  min-width: 450px;
+}
+
+.page-heading {
+  text-align: center;
+  margin: 30px;
+  font-size: 50px;
+  font-weight: 600;
+}
+
+
+
+
+
+:root {
+  --gl-star-size: 40px;
+}
+
 .h-100 {
   min-height: calc(100vh - 165px);
 }
 
 h5 {
   font-size: 14px;
-}
-
-:root {
-  --gl-star-size: 40px;
 }

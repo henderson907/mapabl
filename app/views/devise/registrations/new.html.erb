@@ -1,31 +1,37 @@
-<div class="container py-3">
-  <h2>Sign up</h2>
-  <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), data: { turbo: :false }) do |f| %>
-    <%= f.error_notification %>
-    <div class="form-inputs">
-      <%= f.input :photo, as: :file, required: false, autofocus: true %>
-      <%= f.input :first_name,
-              required: true,
-              autofocus: true %>
-      <%= f.input :last_name,
-              required: true,
-              autofocus: true %>
-      <%= f.input :email,
-                  required: true,
-                  autofocus: true,
-                  input_html: { autocomplete: "email" }%>
-      <%= f.input :password,
-                  required: true,
-                  hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                  input_html: { autocomplete: "new-password" } %>
-      <%= f.input :password_confirmation,
-                  required: true,
-                  input_html: { autocomplete: "new-password" } %>
-    </div>
-    <div class="form-actions text-center">
-      <%= f.button :submit, "Sign up", class: "adept-btn large" %>
-      <br>
-      <%= render "devise/shared/links" %>
-    </div>
-  <% end %>
+<div class="page-heading">Welcome!</div>
+<div class="container py-3 column-container">
+  <div class="column-item">
+    <h2>Sign Up</h2>
+    <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), data: { turbo: :false }) do |f| %>
+      <%= f.error_notification %>
+      <div class="form-inputs">
+        <%= f.input :photo, as: :file, required: false, autofocus: true %>
+        <%= f.input :first_name,
+                required: true,
+                autofocus: true %>
+        <%= f.input :last_name,
+                required: true,
+                autofocus: true %>
+        <%= f.input :email,
+                    required: true,
+                    autofocus: true,
+                    input_html: { autocomplete: "email" }%>
+        <%= f.input :password,
+                    required: true,
+                    hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                    input_html: { autocomplete: "new-password" } %>
+        <%= f.input :password_confirmation,
+                    required: true,
+                    input_html: { autocomplete: "new-password" } %>
+      </div>
+      <div class="form-actions text-center">
+        <%= f.button :submit, "Sign up", class: "enabl-btn-purple large" %>
+        <br>
+        <%= render "devise/shared/links" %>
+      </div>
+    <% end %>
+  </div>
+  <div class="column-item">
+    <%= image_tag('World-in-a-Box.png', alt: "Cartoon depicting the globe coming out of a cardboard box") %>
+  </div>
 </div>
