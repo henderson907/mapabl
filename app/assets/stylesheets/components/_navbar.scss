@@ -1,23 +1,23 @@
-.navbar-enabl {
+.navbar-mapabl {
   background-color: $yellow;
+
+  a {
+    color: black;
+  }
 }
 
-.enabl-logo {
+.mapabl-logo {
 max-width: 250px;
 padding: 10px;
 }
 
-.navbar-enabl a {
-  color: black;
-}
-
 .navbar-toggler {
   border: none;
-}
 
-.navbar-toggler i {
-  color: black;
-  font-size: 28px;
+  i {
+    color: black;
+    font-size: 28px;
+  }
 }
 
 .nav-el {
