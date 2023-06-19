@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [ :home, :about ]
+  skip_before_action :authenticate_user!, only: [ :home, :about, :featured ]
 
   include PgSearch::Model
   pg_search_scope :search,

@@ -6,33 +6,56 @@
       <form action="/venues" method="get">
         <div class="input-group search-bar-total mb-3">
           <input type="text" class="form-control search-bar" name="query" placeholder="Where do you want to go..?" aria-label="Where do you want to go..?" aria-describedby="search">
-          <button class="input-group-text enabl-btn small" id="search">
+          <button class="input-group-text mapabl-btn small" id="search">
             <i class="fa-solid fa-magnifying-glass"></i>
           </button>
         </div>
       </form>
     </div>
   </div>
-  <!-- What is Enabl -->
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4 what-is-adept" id="what">
-          <h3>What is MapAbl?</h3>
-          <p>MapAbl is a community driven solution that allows you to find and filter venues to your accessibility needs</p>
-          <%= image_tag('magnifier.png', alt: "An image of a magnifier") %>
-          <%= link_to "Learn more", about_path, class: "adept-btn large" %>
+
+    <!-- What is MapAbl? -->
+    <div class="card-homepage">
+      <%= image_tag('picture_stand_in.jpg', alt: "To Be Updated!!!") %>
+      <div class="card-homepage-infos">
+        <h2 class="el">What is MapAbl?</h2>
+        <p class="el"> MapAbl is a platform that allows users to find and add
+          accessible venues around the world!
+          Whether you are looking for a restaurant for a
+          date or a gym to get the gains, MapAbl will help you
+          locate one in your area.
+        </p>
+        <%= link_to "Find Out More", about_path, class: "el mapabl-btn-purple large", alt: "Click to find out more" %>
       </div>
-      <div class="col-md-4 what-is-adept" id="find">
-          <h3>Find, visit and enjoy!</h3>
-          <p>Find a place that fits your accesibility requirements, visit and have a blast with friends and family</p>
-          <%= image_tag('beer.png', alt: "An image of beer and celebration") %>
-          <%= link_to "Find place", venues_path, class: "adept-btn large" %>
+    </div>
+
+    <!-- Find, Visit and Review! -->
+    <div class="card-homepage">
+      <div class="card-homepage-infos">
+        <h2 class="el">Find, Visit and Review!</h2>
+        <p class="el"> Did somewhere go above and beyond? Why not
+        leave a rating and review so that other users can
+        check it out?
+
+        You could even take a photo of the great access
+        features they have!
+        </p>
+        <%= link_to "Search", venues_path, class: "el mapabl-btn-purple large", alt: "Click to search your local area" %>
       </div>
-      <div class="col-md-4 what-is-adept" id="review">
-          <h3>Review and share!</h3>
-          <p>Did a place go above and beyond to accomodate access needs? Leave them a review to let other users know!</p>
-          <%= image_tag('star.png', alt: "An image of a star. Rate you favourite places!") %>
-          <%= link_to "Review place", venues_path, class: "adept-btn large" %>
+      <%= image_tag('picture_stand_in.jpg', alt: "To Be Updated!!!") %>
+    </div>
+
+    <!-- Featured Venues in Your Area -->
+    <div class="card-homepage">
+      <%= image_tag('picture_stand_in.jpg', alt: "To Be Updated!!!") %>
+      <div class="card-homepage-infos">
+        <h2 class="el">Featured Venues in Your Area</h2>
+        <p class="el"> See the venues near you that have great ratings!
+
+        Why not check them out for yourself and see what all
+        the fuss is about...
+        </p>
+        <%= link_to "Take a look", featured_path, class: "el mapabl-btn-purple large", alt: "Click to find featured venues" %>
       </div>
     </div>
   </div>
