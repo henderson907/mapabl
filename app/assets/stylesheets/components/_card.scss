@@ -1,0 +1,37 @@
+.card-homepage {
+  overflow: hidden;
+  height: 400px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+
+  img {
+    height: 100%;
+    width: 400px;
+    object-fit: cover;
+  }
+
+  h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  p {
+    font-size: 24px;
+    line-height: 1.4;
+    opacity: .7;
+    margin-bottom: 0;
+    margin-top: 8px;
+  }
+}
+
+.card-homepage .card-homepage-infos {
+  padding: 30px;
+
+  .el {
+    margin: 20px 0px;
+  }
+}
