@@ -32,6 +32,36 @@
   }
 }
 
+.add-venue-btn {
+  position: absolute;
+  padding: 30px 30px !important;
+  border-radius: 50px !important;
+  right: 50px;
+  bottom: 50px;
+  text-align: center;
+  z-index: 9999;
+}
+
+.filter-btn {
+  padding: 5px 30px;
+  margin: 2px 0px;
+  color: black;
+  background-color: $off-white;
+  font-size: 18px;
+  width: max-content;
+  text-align: left;
+  transition-duration: 0.2s;
+
+  &:hover {
+    background-color: $yellow;
+  }
+
+  &:active {
+    background-color: $purple !important;
+    color: white;
+  }
+}
+
 .large {
   margin: 15px 0 15px 0;
   padding: 15px 5px;
@@ -45,6 +75,14 @@
   // width: 130px;
   font-size: 16px;
 }
+
+
+
+
+
+
+
+
 
 
 
@@ -69,16 +107,6 @@
 
 .adept-btn:focus {
   outline: none;
-}
-
-.add-venue-btn {
-  position: absolute;
-  margin: auto auto;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 50px;
-  text-align: center;
-  z-index: 9999;
 }
 
 .btn-check:checked + .btn, :not(.btn-check) + .btn:active, .btn:first-child:active, .btn.active, .btn.show {
