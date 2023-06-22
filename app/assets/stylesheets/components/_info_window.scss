@@ -1,6 +1,7 @@
 .info-container {
   background-color: $white;
   width: 310px;
+  border: 1px solid black;
   border-radius: 10px;
   position: relative;
   left: 50%;
@@ -12,19 +13,12 @@
 }
 
 .info-container-right {
-  background: linear-gradient(
-                              to bottom,
-                              white,
-                              white 60%,
-                              rgba(0, 129, 167, 0.1) 40%,
-                              rgba(0, 129, 167, 0.1)
-                              );
-  padding: 8px 5px;
   width: 100%;
 
   h5 {
     margin-left: 8px;
     margin-top: 8px;
+    font-weight: 900;
   }
 
   p {
@@ -38,9 +32,14 @@
 }
 
 .info-container-details {
-  height: 45%;
+  height: 39.5%;
   padding-right: 10px;
   background-color: $yellow;
+  border-bottom-right-radius: 10px;
+
+  .mapabl-btn-purple {
+    border-radius: 10px !important;
+  }
 }
 
 .venue-image {
