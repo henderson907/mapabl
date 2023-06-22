@@ -42,6 +42,26 @@
   z-index: 9999;
 }
 
+.filter-btn {
+  padding: 5px 30px;
+  margin: 2px 0px;
+  color: black;
+  background-color: $off-white;
+  font-size: 18px;
+  width: max-content;
+  text-align: left;
+  transition-duration: 0.4s;
+
+  &:hover {
+    background-color: $yellow;
+  }
+
+  &:active {
+    background-color: $purple !important;
+    color: white;
+  }
+}
+
 .large {
   margin: 15px 0 15px 0;
   padding: 15px 5px;
@@ -55,6 +75,14 @@
   // width: 130px;
   font-size: 16px;
 }
+
+
+
+
+
+
+
+
 
 
 
