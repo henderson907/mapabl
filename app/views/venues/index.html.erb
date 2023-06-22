@@ -1,5 +1,4 @@
 <% content_for :meta_title, "MapAbl | Venues" %>
-
 <div class="row">
   <div class="col-3">
     <div class="accordion" id="accordionPanelsStayOpenExample">
@@ -44,22 +43,11 @@
     </div>
   </div>
   <div class="col-9">
-    <a href="/venues/new" class="adept-btn add-venue-btn large"><i class="fa-solid fa-plus"></i> Add Venue</a>
+    <a href="/venues/new" class="mapabl-btn-purple add-venue-btn" alt="Add a venue"><i class="fa-sharp fa-regular fa-plus" style="color: #ffffff;"></i></a>
     <div class="map"
       data-controller="map"
       data-map-markers-value="<%= @markers.to_json %>"
       data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
     </div>
   </div>
-</div>
-
-
-
-
-
-
-
-<div style="position: relative";>
-
-
 </div>
