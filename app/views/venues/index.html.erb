@@ -5,16 +5,16 @@
     <br>
     <h4>Accessibility Feature</h4>
     <% @accessibility_features.each do |feature| %>
-      <button type="button" class="btn filter-btn w-100" data-toggle="button" aria-pressed="false" autocomplete="off">
-        <%= feature.feature %>
+      <button type="button" id="<%= feature.id %>" class="btn filter-btn w-100" data-toggle="button" aria-pressed="false" autocomplete="off">
+        <i class="<%= feature.icon_creater(feature.feature) %>"></i>&nbsp;&nbsp;<%= feature.feature %>
       </button>
       <br>
     <% end %>
     <br>
     <h4>Venue Type</h4>
     <% @venue_categories.each do |category| %>
-      <button type="button" class="btn filter-btn w-100" data-toggle="button" aria-pressed="false" autocomplete="off">
-        <%= category.venue_type %>
+      <button type="button" id="<%= category.id %>" class="btn filter-btn w-100" data-toggle="button" aria-pressed="false" autocomplete="off">
+        <i class="<%= category.icon_creater(category.category) %>"></i>&nbsp;&nbsp;<%= category.venue_type %>
       </button>
       <br>
     <% end %>

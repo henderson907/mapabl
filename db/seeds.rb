@@ -31,7 +31,7 @@ AccessibilityFeature.create(category: "Sensory Impairment", feature: "Quiet Room
 AccessibilityFeature.create(category: "Sensory Impairment", feature: "Sensory Room")
 AccessibilityFeature.create(category: "Physical Impairment", feature: "Chairs with Back Support")
 AccessibilityFeature.create(category: "Physical Impairment", feature: "Automatic Doors")
-AccessibilityFeature.create(category: "Physical Impairment", feature: "Items within Easy Reach")
+AccessibilityFeature.create(category: "Physical Impairment", feature: "Items Within Easy Reach")
 AccessibilityFeature.create(category: "Hygiene Requirements", feature: "Biohazard Waste Bin")
 AccessibilityFeature.create(category: "Hygiene Requirements", feature: "Adult Changing Facilities")
 AccessibilityFeature.create(category: "Hygiene Requirements", feature: "Accessible Toilet")
