@@ -61,6 +61,8 @@ VenueCategory.create(category: "Amenities", venue_type: "Gym")
 VenueCategory.create(category: "Amenities", venue_type: "Launderette")
 VenueCategory.create(category: "Amenities", venue_type: "Hotel / Hostel")
 VenueCategory.create(category: "Amenities", venue_type: "Medical Centre")
+VenueCategory.create(category: "Amenities", venue_type: "Police Station")
+VenueCategory.create(category: "Amenities", venue_type: "Fire Station")
 VenueCategory.create(category: "Amenities", venue_type: "Parking")
 VenueCategory.create(category: "Outdoors", venue_type: "Park")
 VenueCategory.create(category: "Outdoors", venue_type: "Beach")
@@ -79,6 +81,7 @@ VenueCategory.create(category: "Shopping", venue_type: "Sports Shop")
 VenueCategory.create(category: "Shopping", venue_type: "Salon")
 VenueCategory.create(category: "Shopping", venue_type: "Hair Dresser")
 VenueCategory.create(category: "Shopping", venue_type: "Garden Centre")
+VenueCategory.create(category: "Other", venue_type: "Other")
 
 puts "Finished seeding VenueCategory (2/3)..."
 
