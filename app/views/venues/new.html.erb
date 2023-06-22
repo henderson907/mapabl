@@ -20,7 +20,7 @@
         <%= f.input :address %>
       </div>
       <div class="adept-input-group">
-        <%= f.association :venue_category, label_method: :category, value_method: :id, selected: :first, include_blank: false %>
+        <%= f.association :venue_category, label_method: :venue_type, value_method: :id, selected: :first, include_blank: false %>
         <%= f.association :accessibility_features, label_method: :feature, value_method: :id, as: :check_boxes, include_blank: false %>
       </div>
       <div class="adept-submit">
