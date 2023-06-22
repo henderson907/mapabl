@@ -1,16 +1,27 @@
-.accordian {
-  position: cover;
+.map {
+  min-width: 100%;
+  height: calc(100vh - 130px);
 }
+
+.mapboxgl-ctrl-top-right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filter-section {
+  padding: 30px;
+  height: calc(100vh - 130px);
+  overflow: scroll;
+}
+
+
+
 
 .accordion-body {
   background-color: $white !important;
   max-width: 100%;
-}
-
-.filter-menu {
-  display: flex;
-  justify-content: space-around;
-  margin-left: 10px;
+  height: calc(100vh - 130px);
 }
 
 .filter-form {
@@ -30,15 +41,4 @@
   border-radius: 10px;
   margin: 3px;
   color: $black;
-}
-
-.map {
-  min-width: 100%;
-  height: calc(100vh - 130px);
-}
-
-.mapboxgl-ctrl-top-right {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
