@@ -9,7 +9,7 @@
   <div class="info-container-right">
     <div class="info-container-address">
         <h5><%= venue.name %></h5>
-
+        <div class="venue_type"><%= venue.venue_category.venue_type %></div>
         <p><i class="fa-sharp fa-solid fa-location-dot" style="color: #000000;"></i> <%= venue.address.truncate(30) %></p>
     </div>
     <div class="info-container-details d-flex justify-content-between align-items-center">

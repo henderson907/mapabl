@@ -18,6 +18,7 @@
   h5 {
     margin-left: 8px;
     margin-top: 8px;
+    margin-bottom: 2px !important;
     font-weight: 900;
   }
 
@@ -29,6 +30,12 @@
 
 .info-container-address {
   height: 55%;
+
+  .venue_type {
+    margin-left: 8px;
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
 }
 
 .info-container-details {
