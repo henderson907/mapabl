@@ -1,14 +1,14 @@
 <% content_for :meta_title, "MapAbl | Venues" %>
 <div class="row">
   <div class="col-3">
-    <div class="accordion" id="accordionPanelsStayOpenExample">
+    <div class="accordion" id="accordionPanelsFilter">
       <div class="accordion-item">
-        <h2 class="accordion-header" id="panelsStayOpen-headingOne">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false" aria-controls="panelsStayOpen-collapseOne">
-            Accessibility Filter
+        <h2 class="accordion-header" id="panelsStayOpen-access">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseAccess" aria-expanded="false" aria-controls="panelsStayOpen-collapseAccess">
+            Filter
           </button>
         </h2>
-        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingOne">
+        <div id="panelsStayOpen-collapseAccess" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-access">
           <div class="accordion-body">
             <form class="filter-form">
               <div class="filter-menu">
@@ -29,16 +29,18 @@
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="accordion" id="accordionPanelsStayOpenExample">
+
+
+
+
       <div class="accordion-item">
-        <h2 class="accordion-header" id="panelsStayOpen-headingOne">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false" aria-controls="panelsStayOpen-collapseOne">
-            Venue Type Filter
+        <h2 class="accordion-header" id="panelsStayOpen-venueType">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseVenueType" aria-expanded="false" aria-controls="panelsStayOpen-collapseVenueType">
+            Filter 2
           </button>
         </h2>
-        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingOne">
+        <div id="panelsStayOpen-collapseVenueType" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-venueType">
           <div class="accordion-body">
             <form class="filter-form">
               <div class="filter-menu">
@@ -60,14 +62,9 @@
         </div>
       </div>
     </div>
-
-
-
-
-
   </div>
   <div class="col-9">
-    <a href="/venues/new" class="mapabl-btn-purple add-venue-btn" alt="Add a venue"><i class="fa-sharp fa-regular fa-plus" style="color: #ffffff;"></i></a>
+    <a href="/venues/new" class="mapabl-btn-purple add-venue-btn" alt="Add a venue"><i class="fa-sharp fa-regular fa-plus" style="color: #ffffff;"></i><p> </p></a>
     <div class="map"
       data-controller="map"
       data-map-markers-value="<%= @markers.to_json %>"
