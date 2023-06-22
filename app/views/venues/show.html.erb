@@ -1,4 +1,4 @@
-<% content_for :meta_title, "Enabl | #{@venue.name}" %>
+<% content_for :meta_title, "MapAbl | #{@venue.name}" %>
 <div class="venue-banner">
   <% if @venue.photos.count > 0 %>
    <%= cl_image_tag @venue.photos.first.key, :quality => "auto", :fetch_format=>:auto %>
