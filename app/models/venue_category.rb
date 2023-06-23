@@ -85,6 +85,8 @@ class VenueCategory < ApplicationRecord
       return "fa-solid fa-train"
     when "Underground Station"
       return "fa-solid fa-train-subway-tunnel"
+    when "School"
+      return "fa-solid fa-graduation-cap"
     when "Other"
       return "fa-solid fa-buildings"
     end

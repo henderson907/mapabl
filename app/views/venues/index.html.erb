@@ -3,9 +3,11 @@
   <div class="col-3 filter-section">
     <h3>Filter</h3>
     <br>
+
+<div data-controller="toggle">
     <h4>Accessibility Feature</h4>
     <% @accessibility_features.each do |feature| %>
-      <button type="button" id="<%= feature.id %>" class="btn filter-btn w-100" data-toggle="button" aria-pressed="false" autocomplete="off">
+      <button type="button" data-action="click->toggle#fire" data-toggle-target="togglableElement" id="<%= feature.id %>" class="btn filter-btn w-100" aria-pressed="false" autocomplete="off">
         <i class="<%= feature.icon_creater(feature.feature) %>"></i>&nbsp;&nbsp;<%= feature.feature %>
       </button>
       <br>
@@ -18,7 +20,7 @@
       </button>
       <br>
     <% end %>
-
+</div>
 
 
 
