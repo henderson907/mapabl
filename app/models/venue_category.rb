@@ -79,6 +79,12 @@ class VenueCategory < ApplicationRecord
       return "fa-solid fa-police-box"
     when "Fire Station"
       return "fa-solid fa-fire-hydrant"
+    when "Airport"
+      return "fa-solid fa-plane-departure"
+    when "Train Station"
+      return "fa-solid fa-train"
+    when "Underground Station"
+      return "fa-solid fa-train-subway-tunnel"
     when "Other"
       return "fa-solid fa-buildings"
     end
