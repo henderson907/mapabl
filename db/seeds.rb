@@ -65,6 +65,9 @@ VenueCategory.create(category: "Amenities", venue_type: "Police Station")
 VenueCategory.create(category: "Amenities", venue_type: "Fire Station")
 VenueCategory.create(category: "Amenities", venue_type: "Parking")
 VenueCategory.create(category: "Amenities", venue_type: "School")
+VenueCategory.create(category: "Amenities", venue_type: "Airport")
+VenueCategory.create(category: "Amenities", venue_type: "Train Station")
+VenueCategory.create(category: "Amenities", venue_type: "Underground Station")
 VenueCategory.create(category: "Outdoors", venue_type: "Park")
 VenueCategory.create(category: "Outdoors", venue_type: "Beach")
 VenueCategory.create(category: "Outdoors", venue_type: "Allotment")
@@ -87,8 +90,8 @@ VenueCategory.create(category: "Other", venue_type: "Other")
 puts "Finished seeding VenueCategory (2/3)..."
 
 # USERS
-User.create(first_name: "Freddy", last_name: "Henderson",
-            email: "freddy.enabl@gmail.com", password: "Enab1")
+User.create(first_name: "Fred", last_name: "Hen",
+            email: "fred@email.com", password: "passw0rd")
 
 puts "Finished seeding User (3/3)..."
 
