@@ -19,18 +19,8 @@
   margin: 10px 10px 10px 0px;
   padding: 15px 25px;
   min-width: fit-content;
-}
 
-.invert-bubble:hover {
-  color: $blue !important;
-  border: 1px solid $blue !important;
-  background-color: white !important;
-  filter: drop-shadow(0 0 0.75rem $blue);
-}
-
-.invert-bubble:hover {
-  color: $blue !important;
-  border: 1px solid $blue !important;
-  background-color: white !important;
-  filter: drop-shadow(0 0 0.75rem $blue);
+  &:hover {
+    filter: drop-shadow(0 0 0.75rem $purple);
+  }
 }
