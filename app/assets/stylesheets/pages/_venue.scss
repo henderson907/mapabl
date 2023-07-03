@@ -15,10 +15,15 @@
 }
 
 .review  {
-  background-color: rgba(0, 129, 167, .1);
+  background-color: rgba(224, 214, 113, .6);
   border-radius: 10px;
   padding: 20px 20px;
   margin: 15px 0;
+
+  .review-header {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .features {

@@ -57,14 +57,28 @@
     <% else %>
       <% @venue.reviews.sort_by(&:created_at).reverse.each do |review| %>
         <div class="review">
-          <p><em><%= review.user.first_name %> <%= review.user.last_name %></em></p>
-          <p><%= review.content %></p>
-          <p>
+          <div class="review-header">
+            <h4><%= review.user.first_name %> <%= review.user.last_name %></h4>
+            <small class="text-right"><%= review.created_at.strftime('%d/%m/%Y') %></small>
+          </div>
+          <p> General Rating:&nbsp;&nbsp;
             <% for i in 1..review.general_rating %>
-                <i class="fa-solid fa-star fa-fw" style="color: #F8BD45;"></i>
+                <i class="fa-solid fa-star fa-fw" style="color: #560085;"></i>
+              <% end %>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              Accessibility Rating:&nbsp;&nbsp;
+              <% for i in 1..review.access_rating %>
+                <i class="fa-solid fa-star fa-fw" style="color: #560085;"></i>
               <% end %>
           </p>
-          <small class="text-right"><%= review.created_at.strftime('%d/%m/%Y - %H:%M') %></small>
+
+          <p>
+            <i class="fa-sharp fa-solid fa-quote-left fa-lg"></i>&nbsp;&nbsp;
+            <%= review.content %>&nbsp;&nbsp;
+            <i class="fa-sharp fa-solid fa-quote-right fa-lg"></i>
+          </p>
+
+
         </div>
       <% end %>
     <% end %>
