@@ -8,9 +8,9 @@
 <div class="container py-5 px-4 info-section">
   <!-- Main-->
   <h3><%= @venue.name %></h3>
-  <h6><%= @venue.venue_category.venue_type %></h6>
+  <h6><%= @venue.venue_category.venue_type %>&nbsp;&nbsp;(&nbsp;<i class="<%= @venue.venue_category.icon_creater(@venue.venue_category.venue_type) %>"></i>&nbsp;)</h6>
   <div class="location my-4">
-    <p><i class="fa-sharp fa-solid fa-location-dot fa-lg"></i> <%= @venue.address %></p>
+    <p><i class="fa-sharp fa-solid fa-location-dot fa-lg"></i>&nbsp;&nbsp;<%= @venue.address %></p>
   </div>
   <div class="d-flex justify-content-between align-items-top my-3">
       <% if @venue.reviews.count == 0 %>
@@ -24,10 +24,10 @@
         </div>
      <% end %>
       <%= link_to new_venue_review_path(@venue) do %>
-        <p><i class="fa-sharp fa-solid fa-pencil fa-lg"></i> Add review</p>
+        <p><i class="fa-sharp fa-solid fa-pencil fa-lg"></i>&nbsp;&nbsp;Add review</p>
       <% end %>
       <%= link_to (nil) do %>
-        <p><i class="fa-regular fa-heart fa-lg"></i> Save</p>
+        <p><i class="fa-regular fa-heart fa-lg"></i>&nbsp;&nbsp;Save</p>
       <% end %>
   </div>
 
@@ -37,12 +37,12 @@
         Sorry! No accessibility features reported by other users
       <% else %>
         <% @venue.accessibility_features.sort_by(&:feature).each do |feature| %>
-          <span class="bubble"><%= feature.feature %></span>
+          <span class="bubble"><i class="<%= feature.icon_creater(feature.feature) %>"></i>&nbsp;&nbsp;<%= feature.feature %></span>
         <% end %>
 
         <%= link_to (nil) do %>
           <div class="bubble-button">
-            <i class="fa-solid fa-plus"></i> Add More
+            <i class="fa-solid fa-plus"></i>&nbsp;&nbsp;Add More
           </div>
         <% end %>
 
