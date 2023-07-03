@@ -63,12 +63,21 @@
           </div>
           <p> General Rating:&nbsp;&nbsp;
             <% for i in 1..review.general_rating %>
-                <i class="fa-solid fa-star fa-fw" style="color: #560085;"></i>
+                <i class="fa-solid fa-star" style="color: #560085;"></i>
               <% end %>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               Accessibility Rating:&nbsp;&nbsp;
               <% for i in 1..review.access_rating %>
-                <i class="fa-solid fa-star fa-fw" style="color: #560085;"></i>
+                <i class="fa-solid fa-star" style="color: #560085;"></i>
+              <% end %>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <!-- Overall Rating is a float, so makes use of half filled stars -->
+              Overall Rating:&nbsp;&nbsp;
+              <% for i in 1..review.avg_rating.floor %>
+                <i class="fa-solid fa-star" style="color: #560085;"></i>
+              <% end %>
+              <% unless review.avg_rating == review.avg_rating.floor %>
+                <i class="fa-solid fa-star-half-stroke" style="color: #560085;"></i>
               <% end %>
           </p>
 
