@@ -10,10 +10,11 @@ class ReviewsController < ApplicationController
     @review = Review.new(review_params)
     @review.venue = @venue
     @review.user = current_user
+    @review.avg_rating = (@review.general_rating + @review.access_rating) / 2
     if @review.save
       redirect_to venue_path(@venue)
     else
-      flash[:alert] = "Ups! Something went wrong"
+      flash[:alert] = "Oops! Something went wrong"
       render :new
     end
   end
