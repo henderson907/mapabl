@@ -10,7 +10,7 @@ class ReviewsController < ApplicationController
     @review = Review.new(review_params)
     @review.venue = @venue
     @review.user = current_user
-    @review.avg_rating = (@review.general_rating + @review.access_rating) / 2
+    @review.avg_rating = (@review.general_rating + @review.access_rating).to_f / 2
     if @review.save
       redirect_to venue_path(@venue)
     else
