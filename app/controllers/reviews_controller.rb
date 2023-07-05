@@ -10,10 +10,11 @@ class ReviewsController < ApplicationController
     @review = Review.new(review_params)
     @review.venue = @venue
     @review.user = current_user
+    @review.avg_rating = (@review.general_rating + @review.access_rating).to_f / 2
     if @review.save
       redirect_to venue_path(@venue)
     else
-      flash[:alert] = "Ups! Something went wrong"
+      flash[:alert] = "Oops! Something went wrong"
       render :new
     end
   end
@@ -25,6 +26,6 @@ class ReviewsController < ApplicationController
   end
 
   def review_params
-    params.require(:review).permit(:content, :rating, :photos)
+    params.require(:review).permit(:content, :general_rating, :access_rating, :photos)
   end
 end

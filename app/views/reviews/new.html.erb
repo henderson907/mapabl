@@ -8,19 +8,24 @@
     <span style="visibility: hidden;"><i class="fa-solid fa-fw fa-arrow-left"></i></span>
   </div>
   <div>
-    <%= simple_form_for [@venue, @review], html: { class: "adept-form" } do |f| %>
+    <%= simple_form_for [@venue, @review], html: { class: "mapabl-form" } do |f| %>
       <div class="d-flex justify-content-center py-2">
         <%= f.label :photos, label: "<i class='fa-solid fa-camera'></i>".html_safe, class: 'upload-avatar' %>
          <%= f.input :photos, as: :file, input_html: { hidden: true }, label: false %>
       </div>
-      <div class="adept-input-group adept-rating">
-        <%= f.input :rating, collection: 1..5, selected: 5, input_html: {data: {controller: "star-rating"}}, label: false %>
+      <div class="mapabl-input-group mapabl-rating">
+      General Rating:
+        <%= f.input :general_rating, collection: 1..5, selected: 5, input_html: {data: {controller: "star-rating"}}, label: false %>
       </div>
-      <div class="adept-input-group">
+      <div class="mapabl-input-group mapabl-rating">
+      Accessibility Rating:
+        <%= f.input :access_rating, collection: 1..5, selected: 5, input_html: {data: {controller: "star-rating"}}, label: false %>
+      </div>
+      <div class="mapabl-input-group">
         <%= f.input :content, as: :text, placeholder: 'Share what you think about this place!', label: false %>
       </div>
-      <div class="adept-submit">
-        <%= f.submit "Publish", class: "adept-btn large" %>
+      <div class="mapabl-submit">
+        <%= f.submit "Publish", class: "mapabl-btn-purple large" %>
       </div>
     <% end %>
   </div>
