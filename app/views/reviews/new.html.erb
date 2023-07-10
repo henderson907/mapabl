@@ -11,7 +11,7 @@
     <%= simple_form_for [@venue, @review], html: { class: "mapabl-form" } do |f| %>
       <div class="d-flex justify-content-center py-2">
         <%= f.label :photos, label: "<i class='fa-solid fa-camera'></i>".html_safe, class: 'upload-avatar' %>
-         <%= f.input :photos, as: :file, input_html: { hidden: true }, label: false %>
+         <%= f.input :photos, as: :file, input_html: { hidden: true, data: { action: 'change->venue#upload' } }, label: false %>
       </div>
       <div class="mapabl-input-group mapabl-rating">
       General Rating:
