@@ -9,5 +9,6 @@ export default class extends Controller {
   }
   change_page() {
     this.navbarElementTarget.classList.add("active");
+    console.log("activated!")
   }
 }
