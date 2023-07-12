@@ -7,17 +7,20 @@ import { application } from "./application"
 import AddressAutocompleteController from "./address_autocomplete_controller"
 application.register("address-autocomplete", AddressAutocompleteController)
 
+import FilterController from "./filter_controller"
+application.register("filter", FilterController)
+
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 
 import MapController from "./map_controller"
 application.register("map", MapController)
 
+import NavbarController from "./navbar_controller"
+application.register("navbar", NavbarController)
+
 import StarRatingController from "./star_rating_controller"
 application.register("star-rating", StarRatingController)
-
-import FilterController from "./filter_controller"
-application.register("filter", FilterController)
 
 import VenueController from "./venue_controller"
 application.register("venue", VenueController)
