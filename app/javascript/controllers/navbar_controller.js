@@ -8,7 +8,7 @@ export default class extends Controller {
     console.log("'Sup bitches")
   }
   change_page() {
-    this.navbarElementTarget.classList.add("active");
+    // this.navbarElementTarget.classList.add("active");
     console.log("activated!")
   }
 }
