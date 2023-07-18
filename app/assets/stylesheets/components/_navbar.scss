@@ -1,5 +1,6 @@
 .navbar-mapabl {
   background-color: $yellow;
+  padding: 0 !important;
 
   a {
     color: black;
@@ -25,8 +26,8 @@ padding: 10px;
 }
 
 .nav-item {
-  padding-left: 50px;
   font-size: 25px;
+  padding: 20px 20px;
 
   i {
     padding-right: 15px;
