@@ -89,6 +89,7 @@ class VenuesController < ApplicationController
 
   def create
     @venue = Venue.new(venue_params)
+    raise
     @venue.save
 
     parameters = params[:venue]
