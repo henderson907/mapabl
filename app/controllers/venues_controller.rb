@@ -9,7 +9,7 @@ class VenuesController < ApplicationController
     filter_options
     filter_markers
     set_markers
-    raise
+
   end
 
   def show
@@ -43,7 +43,7 @@ class VenuesController < ApplicationController
     # loops through accessibility features and if the filter is selected, sends said
     # feature to the venue_filter method
     @accessibility_features.each do |feature|
-      venue_filter(feature.feature) if params["feature#{feature.id}"]
+      venue_filter(feature.feature) if params["#{feature.feature}"]
     end
 
     # loops through the venue categories and if the category is passed via params, sends said
