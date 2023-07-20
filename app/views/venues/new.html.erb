@@ -17,8 +17,8 @@
         <%= f.input :name %>
       </div>
       <div class="mapabl-input-group">
-        <%# f.input :address %>
-        <%= f.input :address, input_html: {class: "d-none"}, wrapper_html: {data: {controller: "address-autocomplete", address_autocomplete_api_key_value: ENV["MAPBOX_API_KEY"]}} %>
+        <%= f.input :address %>
+        <%# f.input :address, input_html: {class: "d-none"}, wrapper_html: {data: {controller: "address-autocomplete", address_autocomplete_api_key_value: ENV["MAPBOX_API_KEY"]}} %>
       </div>
       <div class="mapabl-input-group">
         <%= f.association :venue_category, label_method: :venue_type, value_method: :id, selected: :first, include_blank: false %>

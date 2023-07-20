@@ -10,5 +10,7 @@ export default class extends Controller {
 
   toggle() {
     this.togglableElementTarget.classList.toggle("active");
+    // If the element is now active, remove any markers that do not match the specified criteria
+    // If the element is no longer active, add markers that would otherwise be excluded???
   }
 }
