@@ -5,8 +5,9 @@
     <br>
     <h4>Accessibility Feature</h4>
     <% @accessibility_features.each do |feature| %>
-      <form class="filter-form">
+      <form action="">
         <div data-controller="filter">
+          <input type="hidden" id="feature" name="feature" value="<%= feature.feature %>">
           <button type="submit" data-action="click->filter#toggle" data-filter-target="togglableElement"
           id="<%= feature.id %>" class="btn filter-btn w-100" aria-checked="false" autocomplete="off">
             <i class="<%= feature.icon_creater(feature.feature) %>"></i>&nbsp;&nbsp;<%= feature.feature %>

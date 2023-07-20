@@ -6,10 +6,10 @@ class VenuesController < ApplicationController
     @accessibility_features = AccessibilityFeature.all
     @venue_categories = VenueCategory.all
     @venues = Venue.all.to_a
-
     filter_options
     filter_markers
     set_markers
+    raise
   end
 
   def show
