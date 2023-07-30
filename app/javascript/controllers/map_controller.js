@@ -37,6 +37,7 @@ export default class extends Controller {
     this.defaultPosition()
   }
 
+
   defaultPosition() {
     this.map.on('load', function() {
       if(navigator.geolocation) {

@@ -9,7 +9,10 @@ class VenuesController < ApplicationController
     filter_options
     filter_markers
     set_markers
+  end
 
+  def update_map
+    ## Stuff
   end
 
   def show
