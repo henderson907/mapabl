@@ -6,13 +6,29 @@ class VenuesController < ApplicationController
     @accessibility_features = AccessibilityFeature.all
     @venue_categories = VenueCategory.all
     @venues = Venue.all.to_a
+    @active_filters = []
+    update_filter
     filter_options
     filter_markers
     set_markers
   end
 
-  def update_map
-    ## Stuff
+  # Iterate through filter buttons and if they have the active class, add it to the list
+  # Pass that list to the filter options method (modified)
+
+  ## Selects filter which has been clicked and checks if it is already active
+  ## If yes it removes it from the list, if not it adds it to the list
+  def update_filter
+    @active_filter = AccessibilityFeature.find_by(feature: params[:feature])
+    @active_filter = VenueCategory.find_by(venue_type: params[:venue_type]) if @active_filter.nil?
+
+    if @active_filters.include? @active_filter
+      @active_filters.delete_if { |filter| filter == @active_filter }
+    else
+      @active_filters << @active_filter
+    end
+
+    # Iterate through array and give each one the .active class
   end
 
   def show
@@ -40,6 +56,7 @@ class VenuesController < ApplicationController
         image_url: helpers.asset_url("custom-map-marker.png")
       }
     end
+
   end
 
   def filter_options
