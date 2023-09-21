@@ -32,59 +32,6 @@
 
     <% end %>
 
-
-
-
-
-    <div class="accordion" id="accordionPanelsFilter">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="panelsStayOpen-access">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseAccess" aria-expanded="false" aria-controls="panelsStayOpen-collapseAccess">
-            Filter by Access Requirement
-          </button>
-        </h2>
-        <div id="panelsStayOpen-collapseAccess" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-access">
-          <div class="accordion-body">
-            <form class="filter-form">
-                  <h3 class="text-center">Accessibility Requirements</h3>
-                  <div class="btn-group-vertical" role="group" aria-label="Accessibility criteria options">
-                    <% @accessibility_features.each do |feature| %>
-                      <div class="form-check">
-                        <input type="checkbox" class="btn-check" id="<%= feature.id %>" name="feature<%= feature.id %>" value="1" />
-                        <label class="invert-bubble btn" for="<%= feature.id %>"><i class="<%= feature.icon_creater(feature.feature) %>"></i>  <%= feature.feature %></label>
-                      </div>
-                    <% end %>
-                  </div>
-              <input name="commit" type="submit" class="adept-btn filter-form-button" value="Submit Preferences" data-disable-with="Search" />
-            </form>
-          </div>
-        </div>
-      </div>
-
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="panelsStayOpen-venueType">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseVenueType" aria-expanded="false" aria-controls="panelsStayOpen-collapseVenueType">
-            Filter by Venue
-          </button>
-        </h2>
-        <div id="panelsStayOpen-collapseVenueType" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-venueType">
-          <div class="accordion-body">
-            <form class="filter-form">
-                  <h3 class="text-center">Type of Venue</h3>
-                  <div class="btn-group-vertical" role="group" aria-label="Venue type options">
-                    <% @venue_categories.each do |category| %>
-                      <div class="form-check">
-                        <input type="checkbox" class="btn-check" id="<%= category.id %>" name="category<%= category.id %>" value="1" />
-                        <label class="invert-bubble btn" for="<%= category.id %>"><i class="<%= category.icon_creater(category.category) %>"></i>  <%= category.venue_type %></label>
-                      </div>
-                    <% end %>
-                  </div>
-              <input name="commit" type="submit" class="adept-btn filter-form-button" value="Submit Preferences" data-disable-with="Search" />
-            </form>
-          </div>
-        </div>
-      </div>
-
     </div>
   </div>
 
