@@ -6,29 +6,10 @@ class VenuesController < ApplicationController
     @accessibility_features = AccessibilityFeature.all
     @venue_categories = VenueCategory.all
     @venues = Venue.all.to_a
-    @active_filters = []
-    update_filter
+    #@active_filters = []
     filter_options
     filter_markers
     set_markers
-  end
-
-  # Iterate through filter buttons and if they have the active class, add it to the list
-  # Pass that list to the filter options method (modified)
-
-  ## Selects filter which has been clicked and checks if it is already active
-  ## If yes it removes it from the list, if not it adds it to the list
-  def update_filter
-    @active_filter = AccessibilityFeature.find_by(feature: params[:feature])
-    @active_filter = VenueCategory.find_by(venue_type: params[:venue_type]) if @active_filter.nil?
-
-    if @active_filters.include? @active_filter
-      @active_filters.delete_if { |filter| filter == @active_filter }
-    else
-      @active_filters << @active_filter
-    end
-
-    # Iterate through array and give each one the .active class
   end
 
   def show
@@ -44,6 +25,7 @@ class VenuesController < ApplicationController
       @venues = Venue.joins(:venue_category).where(sql_query, query: "%#{params[:query]}%")
     end
 
+    # Should add popup here
     @venues = Venue.all if @venues.empty?
   end
 
@@ -56,14 +38,13 @@ class VenuesController < ApplicationController
         image_url: helpers.asset_url("custom-map-marker.png")
       }
     end
-
   end
 
   def filter_options
     # loops through accessibility features and if the filter is selected, sends said
     # feature to the venue_filter method
     @accessibility_features.each do |feature|
-      venue_filter(feature.feature) if params["#{feature.feature}"]
+      venue_filter(feature.feature) if params["feature#{feature.id}"]
     end
 
     # loops through the venue categories and if the category is passed via params, sends said
@@ -73,7 +54,6 @@ class VenuesController < ApplicationController
     end
 
     # checks whether @venue is empty and otherwise sets it to Venue.all
-    # sets a popup to appear saying the selected criteria doesn't have any matches.
     @venues = Venue.all.to_a if @venues.empty?
   end
 
