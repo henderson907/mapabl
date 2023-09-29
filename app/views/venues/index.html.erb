@@ -1,6 +1,7 @@
 <% content_for :meta_title, "MapAbl | Venues" %>
 <div class="row">
-  <div class="col-3 filter-section">
+  <div class="col-3">
+   <div class="filter-section">
     <h4>Accessibility Feature</h4>
     <form>
       <div class="btn-group-vertical" role="group" aria-label="Accessibility criteria options">
@@ -21,8 +22,9 @@
           </div>
         <% end %>
       </div>
-      <div class="sticky-button">
-        <input name="commit" type="submit" class="mapabl-btn-purple btn btn-block filter-form-button" value="Filter" data-disable-with="Search" />
+    </div>
+      <div class="filter-button-section">
+        <input name="commit" type="submit" class="mapabl-btn-purple btn filter-form-button" value="Apply Filters" data-disable-with="Search" />
       </div>
 
     </form>
