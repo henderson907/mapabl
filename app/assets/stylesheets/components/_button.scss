@@ -50,7 +50,7 @@
   font-size: 18px;
   width: max-content;
   text-align: left;
-  transition-duration: 0.2s;
+  transition-duration: 0.1s;
 
   &:hover {
     background-color: $yellow;
@@ -58,7 +58,7 @@
 
   &:active {
     background-color: $purple !important;
-    color: white;
+    color: white !important;
   }
 }
 
@@ -76,41 +76,8 @@
   font-size: 16px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-.adept-btn {
-  background-color: $red;
-  border-radius: 6px;
-  border: none;
-  color: $white;
-  font-weight: 600;
-  font-size: 18px;
-  letter-spacing: 1px;
-  text-decoration: none;
-  transition: color .3s, background-color .3s;
-}
-
-.adept-btn:hover {
-  color: white;
-  background-color: $blue;
-}
-
-.adept-btn:focus {
-  outline: none;
-}
-
 .btn-check:checked + .btn, :not(.btn-check) + .btn:active, .btn:first-child:active, .btn.active, .btn.show {
-  color: white;
-  background-color: $blue;
-  border-color: $blue;
+  color: black;
+  background-color: $yellow;
+  border-color: $yellow;
 }

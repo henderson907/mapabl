@@ -11,22 +11,13 @@
 
 .filter-section {
   padding: 30px;
-  height: calc(100vh - 130px);
+  height: calc(100vh - 230px);
   overflow: scroll;
+  overflow-x: hidden;
 }
 
-
-
-
-.accordion-body {
-  background-color: $white !important;
-  max-width: 100%;
-  height: calc(100vh - 130px);
-}
-
-.filter-form {
+.filter-button-section {
   display: flex;
-  flex-direction: column;
 }
 
 .filter-form-button {
@@ -34,11 +25,5 @@
   padding-bottom: 15px;
   font-size: 25px;
   margin: 15px;
-}
-
-.filter-option-btn {
-  background-color: $white;
-  border-radius: 10px;
-  margin: 3px;
-  color: $black;
+  flex-grow: 1;
 }

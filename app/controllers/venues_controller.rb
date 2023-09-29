@@ -6,7 +6,7 @@ class VenuesController < ApplicationController
     @accessibility_features = AccessibilityFeature.all
     @venue_categories = VenueCategory.all
     @venues = Venue.all.to_a
-
+    #@active_filters = []
     filter_options
     filter_markers
     set_markers
@@ -25,6 +25,7 @@ class VenuesController < ApplicationController
       @venues = Venue.joins(:venue_category).where(sql_query, query: "%#{params[:query]}%")
     end
 
+    # Should add popup here
     @venues = Venue.all if @venues.empty?
   end
 
@@ -53,7 +54,6 @@ class VenuesController < ApplicationController
     end
 
     # checks whether @venue is empty and otherwise sets it to Venue.all
-    # sets a popup to appear saying the selected criteria doesn't have any matches.
     @venues = Venue.all.to_a if @venues.empty?
   end
 

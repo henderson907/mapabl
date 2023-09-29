@@ -8,23 +8,23 @@
     <span style="visibility: hidden;"><i class="fa-solid fa-fw fa-arrow-left"></i></span>
   </div>
   <div class="py-2">
-    <%= simple_form_for [@venue], data: { controller: "venue address-autocomplete" }, class: 'adept-form' do |f| %>
+    <%= simple_form_for [@venue], class: 'mapabl-form' do |f| %>
       <div class="d-flex justify-content-center py-2">
         <%= f.label :photos, label: "<i class='fa-solid fa-camera'></i>".html_safe, class: 'upload-avatar',  data: { venue_target: 'upload' } %>
         <%= f.input :photos, as: :file, required: false, autofocus: true, input_html: { hidden: true, data: { action: 'change->venue#upload' } }, label: false %>
       </div>
-      <div class="adept-input-group">
+      <div class="mapabl-input-group">
         <%= f.input :name %>
       </div>
-      <div class="adept-input-group">
+      <div class="mapabl-input-group">
         <%= f.input :address %>
-        <%# f.input :address, wrapper_html: {data: {controller: "address-autocomplete", address_autocomplete_api_key_value: ENV["MAPBOX_API_KEY"]}} %>
+        <%# f.input :address, input_html: {class: "d-none"}, wrapper_html: {data: {controller: "address-autocomplete", address_autocomplete_api_key_value: ENV["MAPBOX_API_KEY"]}} %>
       </div>
-      <div class="adept-input-group">
+      <div class="mapabl-input-group">
         <%= f.association :venue_category, label_method: :venue_type, value_method: :id, selected: :first, include_blank: false %>
         <%= f.association :accessibility_features, label_method: :feature, value_method: :id, as: :check_boxes, include_blank: false %>
       </div>
-      <div class="adept-submit">
+      <div class="mapabl-submit">
         <%= f.submit "Create venue", class: "btn mapabl-btn-purple large text-center" %>
       </div>
     <% end %>
